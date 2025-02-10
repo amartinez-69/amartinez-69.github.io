@@ -3,7 +3,9 @@ body {
   }
   h1 {
     color: blue;
+    font-family: verdana;
   }
   p {
     color: red;
+    font-family: verdana;
   }
