@@ -42,7 +42,7 @@ li a:hover {
 article {
     float: left;
     padding: 20px;
-    width: 70%;
+    width: 75%;
     background-color: #ffffff;
     border: 1px solid #000; 
 }
@@ -63,7 +63,7 @@ footer {
     border: 1px solid #000;
   }
 
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
     nav, article {
       width: 100%;
       height: auto;
