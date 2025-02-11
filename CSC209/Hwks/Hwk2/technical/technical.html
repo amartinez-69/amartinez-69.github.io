@@ -37,9 +37,11 @@
                 btnText.innerHTML = "Read Me";
                 moreText.style.display = "none";
             } else {
-                moreText.style.display = "none";
                 btnText.innerHTML = "Read less";
                 moreText.style.display = "inline";
+            } if(moreText.style.display === "inline") {
+                btnText.innerHTML = "Read Me";
+                moretext.style.display = "none";
             }
         }
     </script>
