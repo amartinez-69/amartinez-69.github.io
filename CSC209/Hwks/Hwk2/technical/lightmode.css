@@ -59,6 +59,7 @@ li a {
     padding: 8px 16px;
     text-decoration: none;
     text-align: center;
+    font-weight: bold;
   }
   
   /* Change the link color on hover */
