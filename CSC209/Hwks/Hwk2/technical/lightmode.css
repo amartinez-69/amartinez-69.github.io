@@ -8,6 +8,7 @@
 }
 
 nav {
+    float: left;
     width: 25%;
     background-color: #ffffff;
     padding: 20px;
@@ -38,10 +39,12 @@ li a:hover {
 
 
 article {
+    float: left;
     padding: 20px;
     width: 75%;
     background-color: #ffffff;
     border: 1px solid #000; 
+    height: 100%;
 }
   
   /* Clear floats after the columns */
