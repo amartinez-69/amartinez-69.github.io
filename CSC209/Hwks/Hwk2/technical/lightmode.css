@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+h1 {
+    font-weight: bold;
+}
 .center {
     display: block;
     margin-left: auto;
@@ -52,7 +55,7 @@ article {
     padding: 10px;
     width: 80%;
     background-color: #ffffff;
-    border: 1px solid #000; 
+    border: 5px solid #000; 
     height: 100%;
 }
   
