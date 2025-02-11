@@ -96,7 +96,9 @@ footer {
 
 #more {display: none;}
 
-
+.button {
+    align-self: center;
+}
 @media (max-width: 600px) {
     nav, article {
       width: 100%;
