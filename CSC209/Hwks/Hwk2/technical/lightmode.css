@@ -14,7 +14,7 @@ nav {
     float: left;
     width: 25%;
     background-color: #ffffff;
-   /* padding: 20px;*/
+    padding: 5px;
     height: 400px;
 }
 nav ul {
@@ -43,7 +43,7 @@ li a:hover {
 
 article {
     float: left;
-    padding: 20px;
+    padding: 10px;
     width: 75%;
     background-color: #ffffff;
     border: 1px solid #000; 
