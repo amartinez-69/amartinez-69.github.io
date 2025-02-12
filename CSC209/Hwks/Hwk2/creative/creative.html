@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Creative for Homework 2</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link id="pagestyle" rel="stylesheet" href="lightmode.css">
+</head>
+
+<body>
+<h1 class="header">Creative ( hours)</h1>
+<section>
+<nav>
+    <ul>
+        <li><a href="../hwk2StartPage.html">Start Page</a></li>
+        <li><a href="../tutorials/tutorials.html">Tutorials</a></li>
+        <li><a href="https://youtu.be/KDorKy-13ak?si=o5B_OnAnYyzmAjS-">SB2025 Halftime Show</a></li>
+    </ul>
+</nav>
+
+<article>
+    <img src="files/header.webp" alt="cats" style="width: 300px; height: 125px;" class="center">
+
+    <h2>CSC209 Web Programming</h2>
+    <h3>Some Information</h3>
+    <p><span id="hide"></span><span id="more">I honestly don't know what to put here, so I'm going to do a little reflection thus far: I feel like I'm getting the hang of this a little bit, especially now that I understand relative paths a bit more. My webpages seem to be working just fine and it's making me very relieved.</span></p>
+    <button onclick="myFunction()" id="myBtn" class="button">Read Me</button>
+    <script>
+        function myFunction() {
+            var hideText = document.getElementById("hide")
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (hideText.style.display === "none") {
+                btnText.innerHTML = "Read Me";
+                hideText.style.display = "inline";
+                moreText.style.display = "none";
+            } else {
+                hideText.style.display = "none";
+                btnText.innerHTML = "Hide";
+                moreText.style.display = "inline";
+            } 
+            
+        }
+    </script>
+    <button class="button"; onClick="swapStyleSheet('darkmode.css')">Invert</button>
+    <button class="button"; onClick="swapStyleSheet('lightmode.css')">Revert</button>
+    <script type="text/javascript">
+        function swapStyleSheet(sheet){
+             document.getElementById('pagestyle').setAttribute('href',sheet);
+        }
+        </script>
+    <table border="5px">
+        <tr style="height:20px"> 
+            <th>Week</th>
+            <th>Date</th>
+            <th>Topic</th>
+            <th>HWK</th>
+        </tr>
+        <tr style="height:70px">
+            <th>
+                <a href="https://www.w3schools.com/html/default.asp">1</a>
+            </th>
+            <th>January 29</th>
+            <th>Software installation. Introduction to Html via W3schools tutorials.</th>
+            <th>HWK1</th>
+        </tr>
+        <tr style="height:70px"> 
+            <th>
+                <a href="https://www.w3schools.com/css/default.asp">2</a>
+            </th>
+            <th>February 5</th>
+            <th>Styling in plain Html and using Css.</th>
+            <th>HWK2</th>
+        </tr>
+        <tr tyle="height:70px">
+            <th>
+                <a href="files/week3.html">3</a>
+            </th>
+            <th>February 12</th>
+            <th>Dynamic web pages with Javascript: functions, button actions. Part 1: Non-repetitive structures. More Javascript. Arrays of strings. Generate dynamic html lists. </th>
+            <th>HWK3</th>
+        </tr>
+        <tr tyle="height:70px">
+            <th>
+                <a href="files/week4.html">4</a>
+            </th>
+            <th>February 19</th>
+            <th>More Javascript</th>
+            <th>HWK4</th>
+        </tr>
+    </table>
+</article>
+</section>
+
+</body>
+</html>
