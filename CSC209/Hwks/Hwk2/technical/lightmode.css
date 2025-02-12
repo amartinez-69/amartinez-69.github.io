@@ -109,6 +109,8 @@ table {
     height: 300px;
 }
 
+
+
 @media (max-width: 600px) {
     nav, article {
       width: 100%;
