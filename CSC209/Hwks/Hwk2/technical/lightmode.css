@@ -109,7 +109,9 @@ table {
     height: 300px;
 }
 
-
+a {
+    color: #000;
+}
 
 @media (max-width: 600px) {
     nav, article {
