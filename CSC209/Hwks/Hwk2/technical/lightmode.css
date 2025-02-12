@@ -103,6 +103,12 @@ footer {
     margin-right: auto;
     width: 10%;
 }
+
+table {
+    width: auto;
+    height: 300px;
+}
+
 @media (max-width: 600px) {
     nav, article {
       width: 100%;
