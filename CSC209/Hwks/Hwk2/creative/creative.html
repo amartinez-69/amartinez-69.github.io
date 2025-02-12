@@ -46,7 +46,7 @@
         }
     </script>
     <button class="button"; onClick="swapStyleSheet('darkmode.css')">Invert</button>
-    <button class="button"; onClick="swapStyleSheet('lightmode.css')">Revert</button>
+    <button class="button"; onClick="swapStyleSheet('lightmode.css')">Black Background</button>
     <script type="text/javascript">
         function swapStyleSheet(sheet){
              document.getElementById('pagestyle').setAttribute('href',sheet);
@@ -92,6 +92,36 @@
             <th>HWK4</th>
         </tr>
     </table>
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+    
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+    
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+          });
+        }
+        </script>
 </article>
 </section>
 
