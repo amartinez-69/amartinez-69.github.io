@@ -4,7 +4,7 @@
 <title>Technical for Homework 2</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="lightmode.css">
+<link id="pagestyle" rel="stylesheet" href="lightmode.css">
 </head>
 
 <body>
@@ -46,6 +46,12 @@
             
         }
     </script>
+    <button onClick="swapStyleSheet('darkmode.css')">Click Here!</button>
+    <script type="text/javascript">
+        function swapStyleSheet(sheet){
+             document.getElementById('pagestyle').setAttribute('href',sheet);
+        }
+        </script>
     <table border="5px">
         <tr style="height:20px"> 
             <th>Week</th>
