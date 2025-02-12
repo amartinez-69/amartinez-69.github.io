@@ -69,8 +69,8 @@ li a {
   
   /* Change the link color on hover */
 li a:hover {
-    background-color: rgb(20, 73, 53);
-    color: rgb(40, 108, 82);
+    background-color: rgb(104, 223, 177);
+    color: rgb(43, 108, 83);
   }
 
 
@@ -78,7 +78,7 @@ article {
     float: left;
     padding: 10px;
     width: 80%;
-    background-color: #ffffff;
+    background-color: rgb(17, 208, 135);
     border: 5px solid rgb(40, 108, 82); 
     height: 100%;
 }
