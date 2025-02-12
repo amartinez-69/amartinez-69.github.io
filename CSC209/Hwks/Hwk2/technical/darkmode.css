@@ -46,7 +46,7 @@ nav {
     width: 20%;
     background-color: #000000;
     padding: 1px;
-    height: 400px;
+    height: 100%;
 }
 nav ul {
     list-style-type: none;
