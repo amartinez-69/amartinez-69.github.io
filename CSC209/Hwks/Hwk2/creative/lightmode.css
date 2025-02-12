@@ -131,17 +131,19 @@ a {
   }
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
+.active, .accordion:hover {
     background-color: #ccc;
   }
   
   /* Style the accordion panel. Note: hidden by default */
-  .panel {
+.panel {
     padding: 0 18px;
     background-color: white;
-    display: none;
+    max-height: 0;
     overflow: hidden;
+    transition: max-height 0.2s ease-out;
   }
+
 
 @media (max-width: 600px) {
     nav, article {
