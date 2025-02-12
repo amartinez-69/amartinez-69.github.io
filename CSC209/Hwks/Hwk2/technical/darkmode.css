@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+body {
+    background-color: #000000;
+}
 h1 {
     font-weight: bold;
     color: #ffffff;
