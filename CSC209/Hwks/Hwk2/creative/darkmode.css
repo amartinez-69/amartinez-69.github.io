@@ -124,7 +124,7 @@ a {
     cursor: pointer;
     padding: 18px;
     width: 100%;
-    text-align: left;
+    text-align: center;
     border: 5px solid white;
     outline: solid white;
     transition: 0.4s;
