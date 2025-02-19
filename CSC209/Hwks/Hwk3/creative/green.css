@@ -144,7 +144,6 @@ a {
     transition: max-height 0.2s ease-out;
   }
 
-
 @media (max-width: 600px) {
     nav, article {
       width: 100%;
