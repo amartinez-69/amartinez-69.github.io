@@ -1,4 +1,4 @@
-/*let slideIndex = 1;*/
+/*let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -23,8 +23,7 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-}
-
+}*/
 var images = [
     "image1.jpeg",
     "image2.webp", 
