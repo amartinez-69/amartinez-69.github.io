@@ -6,17 +6,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link id="pagestyle" rel="stylesheet" href="green.css">
 <button onclick="clickHere()" id="newBtn" class="button">Hide Website</button>
+<div id="hiddenImage">
+    <img src="files/oops-sorry-my-mistake-man-600nw-1946473699.webp">
+</div>
 <script>
     function clickHere() {
         var content = document.getElementById("click");
         var newBtnStuff = document.getElementById("newBtn");
+        var hiddenImage = document.getElementById("hiddenImage");
 
         if (content.style.display === "none") {
             newBtnStuff.innerHTML = "Hide Website";
             content.style.display = "block";
+            hiddenImage.style.display = "none";
+
         } else {
             newBtnStuff.innerHTML = "Display Website";
             content.style.display = "none";
+            hiddenImage.style.display = "block";
         }
     }
 </script>
