@@ -1,4 +1,4 @@
-let slideIndex = 1;
+/* let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -24,3 +24,36 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+*/
+const images = [
+    "../files/image1.jpeg",
+    "../files/image2.webp", 
+    "../files/triumphant-success-reaching-new-heights-of-achievement-ai-generative-photo.jpg"
+];
+
+let slideIndex = 0;
+
+// Function to generate slideshow <div> elements
+function generateSlideshow() {
+    const container = document.getElementById('slideshowContainer');
+    images.forEach((image, index) => {
+        const div = document.createElement('div');
+        div.classList.add('mySlides');
+        if (index === slideIndex) {
+            div.classList.add('active');
+        }
+        div.innerHTML = `<img src="${image}" alt="Slide ${index + 1}" style="width:100%; height:100%;">`;
+        container.appendChild(div);
+    });
+}
+
+// Function to change slides
+function changeSlide(n) {
+    const slides = document.querySelectorAll('.mySlides');
+    slides[slideIndex].classList.remove('active');
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    slides[slideIndex].classList.add('active');
+}
+
+// Initialize the slideshow
+generateSlideshow();
