@@ -5,24 +5,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link id="pagestyle" rel="stylesheet" href="green.css">
-<span id="hideWebsite"></span>
 <button onclick="clickHere()" id="newBtn" class="button">Click Here!</button>
 <script>
     function clickHere() {
         var websiteClick = document.getElementById("click");
         var newBtnStuff = document.getElementById("newBtn");
-        var blankWebsite = document.getElementById("hideWebsite");
+
         if (websiteClick.style.display === none) {
             newBtnStuff.innerHTML = "Click Here!";
             websiteClick.style.display = "inline";
-            blackWebsite.style.display = "none";
         }
     }
 </script>
 </head>
 
 <body>
-<span id="click">
+<div id="click">
 <h1 class="header">Creative (1 hour)</h1>
 <section>
 <nav>
@@ -141,6 +139,6 @@
     <p>Again, all images are taken from the internet.</p>
 </article>
 </section>
-</span>
+</div>
 </body>
 </html>
