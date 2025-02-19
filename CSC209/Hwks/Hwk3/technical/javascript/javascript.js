@@ -37,7 +37,7 @@ let slideIndex = 0;
 function generateSlideshow() {
     var container = document.getElementById('slideshowContainer');
     images.forEach((image, index) => {
-        const div = document.createElement('div');
+        var div = document.createElement('div');
         div.classList.add('mySlides');
         if (index === slideIndex) {
             div.classList.add('active');
