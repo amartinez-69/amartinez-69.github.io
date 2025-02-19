@@ -26,9 +26,9 @@ function showSlides(n) {
 }
 */
 const images = [
-    "../files/image1.jpeg",
-    "../files/image2.webp", 
-    "../files/triumphant-success-reaching-new-heights-of-achievement-ai-generative-photo.jpg"
+    "image1.jpeg",
+    "image2.webp", 
+    "triumphant-success-reaching-new-heights-of-achievement-ai-generative-photo.jpg"
 ];
 
 let slideIndex = 0;
