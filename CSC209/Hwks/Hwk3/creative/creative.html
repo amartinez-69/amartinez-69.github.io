@@ -5,36 +5,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link id="pagestyle" rel="stylesheet" href="green.css">
+
 <button onclick="clickHere()" id="newBtn" class="button">Hide Website</button>
 
-<script>
-    function clickHere() {
-        var content = document.getElementById("click");
-        var newBtnStuff = document.getElementById("newBtn");
-        var hiddenImage = document.getElementById("hiddenImage");
-        var hideImage = document.getElementById("blank");
-
-        if (content.style.display === "none") {
-            newBtnStuff.innerHTML = "Hide Website";
-            content.style.display = "block";
-            hideImage.style.display = "none";
-            hiddenImage.style.display = "none";
-
-        } else {
-            newBtnStuff.innerHTML = "Display Website";
-            content.style.display = "none";
-            hideImage.style.display = "block";
-            hiddenImage.style.display = "block";
-        }
-    }
-</script>
 </head>
+
 <span id="blank"></span>
 <div id="hiddenImage" style="display: none";>
     <img class="center" src="files/oops-sorry-my-mistake-man-600nw-1946473699.webp">
 </div>
 <div id="click">
+
 <body>
+
 <h1 class="header">Creative (1 hour)</h1>
 <section>
 <nav>
@@ -53,24 +36,6 @@
     <h3>Some Information</h3>
     <p><span id="hide"></span><span id="more">Once again, I'm not the most creative so I decided to use the same format from technical in my creative part. I've decided to make it varying shades of green to match the Pusheen header (by the way, all images on this webpage were taken from the internet). I also included a little about me section to practice some other features I learned from the tutorials, such as an animated accordion-style feature with a few fun facts about me, like my favorite artists, my plans for the summer, and my hobbies!</accordion-style>. </span></p>
     <button onclick="myFunction()" id="myBtn" class="button">Read Me</button>
-    <script>
-        function myFunction() {
-            var hideText = document.getElementById("hide");
-            var moreText = document.getElementById("more");
-            var btnText = document.getElementById("myBtn");
-
-            if (hideText.style.display === "none") {
-                btnText.innerHTML = "Read Me";
-                hideText.style.display = "inline";
-                moreText.style.display = "none";
-            } else {
-                hideText.style.display = "none";
-                btnText.innerHTML = "Hide";
-                moreText.style.display = "inline";
-            } 
-            
-        }
-    </script>
     <p> </p>
     <button class="button"; onClick="swapStyleSheet('darkmode.css')">Black&White</button>
     <p> </p>
@@ -153,6 +118,9 @@
     <p>Again, all images are taken from the internet.</p>
 </article>
 </section>
+
 </body>
+
 </div>
+
 </html>
