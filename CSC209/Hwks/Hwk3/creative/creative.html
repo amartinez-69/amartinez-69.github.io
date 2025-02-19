@@ -5,17 +5,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link id="pagestyle" rel="stylesheet" href="green.css">
-<button onclick="clickHere()" id="newBtn" class="button">Click Here!</button>
+<button onclick="clickHere()" id="newBtn" class="button">Hide Website</button>
 <script>
     function clickHere() {
         var content = document.getElementById("click");
         var newBtnStuff = document.getElementById("newBtn");
 
         if (content.style.display === "none") {
-            newBtnStuff.innerHTML = "Click Here!";
+            newBtnStuff.innerHTML = "Hide Website";
             content.style.display = "block";
         } else {
-            newBtnStuff.innerHTML = "Hide this Website";
+            newBtnStuff.innerHTML = "Display Website";
             content.style.display = "none";
         }
     }
