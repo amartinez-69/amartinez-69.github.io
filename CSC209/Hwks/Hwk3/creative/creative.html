@@ -8,12 +8,15 @@
 <button onclick="clickHere()" id="newBtn" class="button">Click Here!</button>
 <script>
     function clickHere() {
-        var websiteClick = document.getElementById("click");
+        var content = document.getElementById("click");
         var newBtnStuff = document.getElementById("newBtn");
 
-        if (websiteClick.style.display === "none") {
+        if (content.style.display === "none") {
             newBtnStuff.innerHTML = "Click Here!";
-            websiteClick.style.display = "inline";
+            content.style.display = "block";
+        } else {
+            newBtnStuff.innerHTML = "Hide this Website";
+            content.style.display = "none";
         }
     }
 </script>
