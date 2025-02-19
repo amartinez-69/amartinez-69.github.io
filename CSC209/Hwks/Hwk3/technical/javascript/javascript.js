@@ -25,7 +25,7 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 */
-const images = [
+var images = [
     "image1.jpeg",
     "image2.webp", 
     "triumphant-success-reaching-new-heights-of-achievement-ai-generative-photo.jpg"
@@ -35,7 +35,7 @@ let slideIndex = 0;
 
 // Function to generate slideshow <div> elements
 function generateSlideshow() {
-    const container = document.getElementById('slideshowContainer');
+    var container = document.getElementById('slideshowContainer');
     images.forEach((image, index) => {
         const div = document.createElement('div');
         div.classList.add('mySlides');
