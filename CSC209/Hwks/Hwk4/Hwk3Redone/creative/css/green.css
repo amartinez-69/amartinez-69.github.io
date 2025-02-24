@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(96, 183, 149)
+}
+h1 {
+    font-weight: bold;
+    color: rgb(40, 108, 82);
+}
+
+h2 {
+    font-weight: bold;
+    color: rgb(40, 108, 82);
+    text-align: center;
+}
+
+h3 {
+    font-weight: bold;
+    color: rgb(40, 108, 82);
+    text-align: center;
+}
+
+p {
+    font-weight: bold;
+    color: rgb(40, 108, 82);
+    text-align: center;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.header {
+    background-color: rgb(163, 231, 205);
+    color: rgb(40, 108, 82);
+    text-align: center;
+    padding: 20px;
+    border-color: rgb(40, 108, 82);
+    border: 5px solid rgb(40, 108, 82);
+}
+
+nav {
+    float: left;
+    width: 20%;
+    background-color: rgb(43, 151, 110);
+    padding: 1px;
+    height: 100%;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(43, 151, 110);
+    height: 100%;
+    overflow: auto;
+    border: 5px solid rgb(40, 108, 82);
+  }
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Change the link color on hover */
+li a:hover {
+    background-color: rgb(104, 223, 177);
+    color: rgb(43, 108, 83);
+  }
+
+
+article {
+    float: left;
+    padding: 10px;
+    width: 80%;
+    background-color: rgb(70, 186, 141);
+    border: 5px solid rgb(40, 108, 82); 
+    height: 100%;
+}
+  
+  /* Clear floats after the columns */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+footer {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(40, 108, 82);
+  }
+
+#more {display: none;}
+
+.button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+table {
+    width: 100%;
+    height: 300px;
+}
+
+a {
+    color: rgb(40, 108, 82);
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color:rgb(43, 151, 110);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: rgb(57, 138, 107)#ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: rgb(163, 231, 205);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+@media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+}
