@@ -2,8 +2,6 @@
 <html>
 <body>
 
-<h3>A demonstration of how to access a Hidden Input Field</h3>
-
 <input type="checkbox" id="myCheckbox" onclick="showImage()">Show Image</input>
 <div id="image"></div>
 <p>Click the button to get the value of the hidden input field.</p>
@@ -12,7 +10,7 @@
 <script>
     function showImage() {
         if(document.getElementById("myCheckbox").checked) {
-            document.getElementById("image").innerHTML= "<img src=''../../Hwk3Redone/creative/files/good-bye-simpsons.gif' alt='random gif'>";
+            document.getElementById("image").innerHTML= "<img src='../../Hwk3Redone/creative/files/good-bye-simpsons.gif' alt='random gif'>";
         }
     }
 </script>
