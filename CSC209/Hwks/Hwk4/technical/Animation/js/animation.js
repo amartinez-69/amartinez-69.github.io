@@ -21,7 +21,7 @@ function moveBlue()
 {   
     var blueSquare = document.getElementById("blueSq");   
     var bluePos = 350;
-    var stepBlueId = setInterval(stepBlue, 10); //makes function call at specified intervals
+    var stepBlueId = setInterval(stepBlue, -10); //makes function call at specified intervals
 
     function stepBlue() {
         if (bluePos == 0) {
