@@ -24,7 +24,7 @@ function moveBlue()
     var stepBlueId = setInterval(stepBlue, 10); //makes function call at specified intervals
 
     function stepBlue() {
-        if (redPos == 350) {
+        if (bluePos == 350) {
             clearInterval(stepBlueId); //clears a timer set with the setInterval() method
         } else {
             bluePos--; 
