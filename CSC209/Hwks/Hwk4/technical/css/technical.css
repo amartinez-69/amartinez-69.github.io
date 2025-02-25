@@ -1,0 +1,63 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: #e0e0e0;
+    border: 1px solid #000;
+}
+
+.square {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+#square1 {
+    background-color: red;
+    top: 10px;
+    left: 10px;
+}
+
+#square2 {
+    background-color: blue;
+    top: 10px;
+    left: 470px;
+}
+
+#square3 {
+    background-color: green;
+    top: 470px;
+    left: 10px;
+}
+
+#square4 {
+    background-color: yellow;
+    top: 470px;
+    left: 470px;
+}
+
+#square5 {
+    background-color: purple;
+    top: 250px;
+    left: 250px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
