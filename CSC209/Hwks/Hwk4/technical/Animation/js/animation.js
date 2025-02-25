@@ -21,15 +21,15 @@ function moveBlue()
 {   
     var blueSquare = document.getElementById("blueSq");   
     var bluePos = 350;
-    var stepBlueId = setInterval(stepBlue, -10); //makes function call at specified intervals
+    var stepBlueId = setInterval(stepBlue, 10); //makes function call at specified intervals
 
     function stepBlue() {
         if (bluePos == 0) {
             clearInterval(stepBlueId); //clears a timer set with the setInterval() method
         } else {
             bluePos--; 
-            blueSquare.style.top = bluePos - 'px'; 
-            blueSquare.style.left = bluePos - 'px';
+            blueSquare.style.top = bluePos + 'px'; 
+            blueSquare.style.left = bluePos + 'px';
         }
     }
     
