@@ -1,18 +1,17 @@
-// script.js
-document.getElementById("startButton").addEventListener("click", startMovement);
+document.getElementById("startButton");
 
 function startMovement() {
-    const squares = document.getElementsByClassName('.square');
+    const squares = document.querySelectorAll('.square');
     const squareData = [];
 
     squares.forEach((square, index) => {
-        var initialPosition = {
+        let initialPosition = {
             top: parseInt(square.style.top),
             left: parseInt(square.style.left)
         };
 
         // Initial direction of motion: positive for moving down/right, negative for up/left
-        var direction = index % 2 === 0 ? 1 : -1; // alternate direction for variety
+        let direction = index % 2 === 0 ? 1 : -1; // alternate direction for variety
         
         squareData.push({
             square,
@@ -30,7 +29,7 @@ function startMovement() {
 }
 
 function moveSquare(data) {
-    var stepId = setInterval(() => {
+    let stepId = setInterval(() => {
         // Update position based on direction
         data.topPos += data.topDirection;
         data.leftPos += data.leftDirection;
