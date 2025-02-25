@@ -28,8 +28,8 @@ function moveBlue()
             clearInterval(stepBlueId); //clears a timer set with the setInterval() method
         } else {
             bluePos--; 
-            blueSquare.style.top = bluePos - 'px'; 
-            blueSquare.style.left = bluePos - 'px';
+            blueSquare.style.bottom = bluePos - 'px'; 
+            blueSquare.style.right = bluePos - 'px';
         }
     }
     
