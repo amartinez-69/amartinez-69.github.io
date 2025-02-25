@@ -1,45 +1,45 @@
 
 .container {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
     background-color: #e0e0e0;
     border: 1px solid #000;
 }
 
 .square {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background-color: red;
 }
 
 #square1 {
     background-color: red;
-    top: 10px;
-    left: 10px;
+    top: 0px;
+    left: 0px;
 }
 
 #square2 {
     background-color: blue;
-    top: 10px;
-    left: 470px;
+    top: 0px;
+    left: 350px;
 }
 
 #square3 {
     background-color: green;
-    top: 470px;
-    left: 10px;
+    top: 350px;
+    left: 0px;
 }
 
 #square4 {
     background-color: yellow;
-    top: 470px;
-    left: 470px;
+    top: 350px;
+    left: 350px;
 }
 
 #square5 {
     background-color: purple;
-    top: 250px;
-    left: 250px;
+    top: 175px;
+    left: 175px;
 }
