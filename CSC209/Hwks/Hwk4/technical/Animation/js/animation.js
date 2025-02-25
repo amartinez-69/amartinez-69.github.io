@@ -14,6 +14,25 @@ function moveRed()
             redSquare.style.left = redPos + 'px';
         }
     }
+    
+}
+
+function moveBlue()
+{   
+    var blueSquare = document.getElementById("blueSq");   
+    var bluePos = 350;
+    var stepBlueId = setInterval(stepBlue, 10); //makes function call at specified intervals
+
+    function stepBlue() {
+        if (redPos == 350) {
+            clearInterval(stepBlueId); //clears a timer set with the setInterval() method
+        } else {
+            bluePos--; 
+            blueSquare.style.top = bluePos - 'px'; 
+            blueSquare.style.left = bluePos - 'px';
+        }
+    }
+    
 }
 
 
