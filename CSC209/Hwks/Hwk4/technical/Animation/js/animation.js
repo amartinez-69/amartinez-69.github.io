@@ -27,7 +27,7 @@ function moveBlue()
         if (bluePos == 350) {
             clearInterval(stepBlueId); //clears a timer set with the setInterval() method
         } else {
-            bluePos--; 
+            bluePos++; 
             blueSquare.style.top = bluePos - 'px'; 
             blueSquare.style.left = bluePos - 'px';
         }
