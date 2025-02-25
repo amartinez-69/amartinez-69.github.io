@@ -6,13 +6,13 @@ function startMovement() {
     const squareData = [];
 
     squares.forEach((square, index) => {
-        let initialPosition = {
+        var initialPosition = {
             top: parseInt(square.style.top),
             left: parseInt(square.style.left)
         };
 
         // Initial direction of motion: positive for moving down/right, negative for up/left
-        let direction = index % 2 === 0 ? 1 : -1; // alternate direction for variety
+        var direction = index % 2 === 0 ? 1 : -1; // alternate direction for variety
         
         squareData.push({
             square,
@@ -30,7 +30,7 @@ function startMovement() {
 }
 
 function moveSquare(data) {
-    let stepId = setInterval(() => {
+    var stepId = setInterval(() => {
         // Update position based on direction
         data.topPos += data.topDirection;
         data.leftPos += data.leftDirection;
@@ -40,7 +40,7 @@ function moveSquare(data) {
         data.square.style.left = data.leftPos + 'px';
 
         // Stop when the square reaches a boundary (container's edges)
-        if (data.topPos <= 0 || data.leftPos <= 0 || data.topPos >= 470 || data.leftPos >= 470) {
+        if (data.topPos <= 0 || data.leftPos <= 0 || data.topPos >= 350 || data.leftPos >= 350) {
             clearInterval(stepId); // Stop the square when it hits a border
         }
     }, 10);
