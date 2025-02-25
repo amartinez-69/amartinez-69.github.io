@@ -2,7 +2,7 @@
 document.getElementById("startButton").addEventListener("click", startMovement);
 
 function startMovement() {
-    const squares = document.querySelectorAll('.square');
+    const squares = document.getElementsByClassName('.square');
     const squareData = [];
 
     squares.forEach((square, index) => {
