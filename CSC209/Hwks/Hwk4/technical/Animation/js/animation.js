@@ -20,11 +20,11 @@ function moveRed()
 function moveBlue()
 {   
     var blueSquare = document.getElementById("blueSq");   
-    var bluePos = 0;
+    var bluePos = 350;
     var stepBlueId = setInterval(stepBlue, 10); //makes function call at specified intervals
 
     function stepBlue() {
-        if (bluePos == 350) {
+        if (bluePos == 0) {
             clearInterval(stepBlueId); //clears a timer set with the setInterval() method
         } else {
             bluePos++; 
