@@ -11,6 +11,7 @@ Sorry, your browser does not support canvas.
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 //first particle
+/*
 ctx.beginPath();
 ctx.arc(150, 150, 10, 0, 2 * Math.PI);
 ctx.stroke(); 
@@ -47,8 +48,28 @@ ctx.beginPath();
 ctx.moveTo(x2, y2);
 ctx.lineTo(x2 + 20, y2 - 20);
 ctx.stroke();
+*/
+const particles = 5;
+const symbols = ['+', '-'];
 
+function drawParticles() {
+    for (let i = 0; i < particles; i++){
+        var x = Math.random() * (300-1) + 1;
+        var y = Math.random() * (300-1) + 1;
+        //var xSymbol = Math.floor(Math.random() * symbols.length);
+       // var xSymbol = Math.floor(Math.random() * symbols.length);
 
+        ctx.beginPath();
+        ctx.arc(x, y, 10, 0, 2 * Math.PI);
+        ctx.strokeStyle = "red";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x - 20, y + 20);
+        ctx.stroke();
+    }
+}
 </script>
 
 </body>
