@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML5 Canvas</h1>
+
+<canvas id="myCanvas" width="300" height="300" style="border:1px solid black;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+//first particle
+ctx.beginPath();
+ctx.arc(150, 150, 10, 0, 2 * Math.PI);
+ctx.stroke(); 
+
+ctx.beginPath();
+ctx.moveTo(150, 150);
+ctx.lineTo(150, 170);
+ctx.stroke();
+
+//second particle
+var x = Math.random() * (300-1) + 1;
+var y = Math.random() * (300-1) + 1;
+
+ctx.beginPath();
+ctx.arc(x, y, 10, 0, 2 * Math.PI);
+ctx.strokeStyle = "red";
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(x, y);
+ctx.lineTo(x, y + 20);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
