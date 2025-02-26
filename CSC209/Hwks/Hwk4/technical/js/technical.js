@@ -1,5 +1,5 @@
 function startMovement(){
-    const squares = document.getElementsByClassName("squares");
+    const squares = document.querySelectorAll(".squares");
     const squareData = [];
 
     console.log(squares);
