@@ -5,7 +5,7 @@ function startMovement(){
     squares.forEach((square) => {
         squareData.push({
             square,
-            topPos: square..top,
+            topPos: square.style.top,
             leftPos: square.style.left,
         });
     });
