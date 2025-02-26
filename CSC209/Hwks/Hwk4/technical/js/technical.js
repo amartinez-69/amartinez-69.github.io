@@ -6,7 +6,7 @@ function startMovement(){
         let leftPos = parseInt(square.style.left);
         let topPos = parseInt(square.style.top);
 
-        let horizontalDirection = Math.random() > 0.5 ? 1 : -1; 
+        let horizontalDirection = Math.random() > 0.5 ? 1 : -1; //I'm also not sure if I'm using this correctly, i've never used math before.
         let verticalDirection = Math.random() > 0.5 ? 1 : -1; 
 
         if(square.dataset.intervalId) {
