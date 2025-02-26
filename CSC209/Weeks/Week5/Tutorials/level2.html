@@ -34,6 +34,18 @@ ctx.moveTo(x, y);
 ctx.lineTo(x - 20, y + 20);
 ctx.stroke();
 
+var x2 = Math.random() * (300-1) + 1;
+var y2 = Math.random() * (300-1) + 1;
+
+ctx.beginPath();
+ctx.arc(x2, y2, 10, 0, 2 * Math.PI);
+ctx.strokeStyle = "blue";
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(x2, y2);
+ctx.lineTo(x2 + 20, y2 - 20);
+ctx.stroke();
 </script>
 
 </body>
