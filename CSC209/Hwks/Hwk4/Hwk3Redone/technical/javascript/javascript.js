@@ -14,8 +14,8 @@ function loadSlides() {
         let slideNum = document.createElement("div");
         slideNum.className = 'numberText';
         slideNum.textContent = `${i + 1} / ${images.length}`;
-        slideNum.style.marginLeft = "-170%";  // Adjust as needed
-        slideNum.style.marginTop = "-72%"; 
+        //slideNum.style.marginLeft = "-170%";  // Adjust as needed
+        //slideNum.style.marginTop = "-72%"; 
         slideNum.style.color = 'white';
         slideNum.style.fontWeight = 'bold';
 
