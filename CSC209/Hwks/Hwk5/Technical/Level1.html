@@ -21,13 +21,13 @@
         const point = { x: 150, y: 150, radius: 5, color: 'red' };
 
         // Vector properties
-        const vector = { x: 100, y: 50, color: 'blue' };
+        const vector = { x: 20, y: 20, color: 'blue' };
 
         // Draw the point
         function drawPoint() {
             ctx.beginPath();
             ctx.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
-            ctx.fillStyle = point.color;
+            ctx.strokeStyle = point.color;
             ctx.fill();
         }
 
