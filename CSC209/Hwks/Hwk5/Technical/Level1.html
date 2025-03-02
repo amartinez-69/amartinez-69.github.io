@@ -18,7 +18,7 @@
         const ctx = canvas.getContext('2d');
 
         // Point properties
-        const point = { x: 150, y: 150, radius: 5, color: 'red' };
+        const point = { x: 150, y: 150, radius: 10, color: 'red' };
 
         // Vector properties
         const vector = { x: 20, y: 20, color: 'blue' };
@@ -27,8 +27,7 @@
         function drawPoint() {
             ctx.beginPath();
             ctx.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
-            ctx.strokeStyle = point.color;
-            ctx.fill();
+            ctx.stroke();
         }
 
         // Draw the vector
