@@ -42,8 +42,8 @@ function drawVector(point) {
 function updatePoints() {
     for(i = 0; i < points.length; i++){
         // Scale the vector by the speed factor
-        points[i].x += points[i].vector.x * NRSTEPS * 0.05;
-        points[i].y += points[i].vector.y * NRSTEPS * 0.05;
+        points[i].x += points[i].vector.x * NRSTEPS * 0.005;
+        points[i].y += points[i].vector.y * NRSTEPS * 0.005;
     };
 }
 
