@@ -14,9 +14,10 @@ const points = [
 ];
 */
 
-const NRPTS = 5;
+//const NRPTS = 3;
 
 function generateNewPoints(){
+    const NRPTS = 3;
     const points = [];
     for(let i = 0; i < NRPTS; i++){
         points.push({
@@ -50,7 +51,7 @@ function drawVector(point) {
 
 // Draw the scene
 function drawScene(points) {
-    //ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     for(let i = 0; i < points.length; i++){
         drawPoint(points[i]);
         drawVector(points[i]);
