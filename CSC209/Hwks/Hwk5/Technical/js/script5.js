@@ -39,13 +39,6 @@ function drawVector(point) {
     ctx.stroke();
 }
 
-function updatePoints() {
-    points.forEach(point => {
-        point.x += point.vector.x * 0.05;
-        point.y += point.vector.y * 0.05;
-    });
-}
-
 // Draw the scene
 function drawScene() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -73,7 +66,7 @@ function animate(points){
 // Update points when button is clicked
 button.addEventListener('click', () => {
     drawScene();
-    setInterval(movePoints, NRSTEPS);
+    setInterval(animate, NRSTEPS);
 }); 
 
 // Initial draw
