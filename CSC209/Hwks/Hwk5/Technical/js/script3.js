@@ -57,7 +57,7 @@ function drawScene() {
     }
 }
 // Update points when button is clicked
-randomizeButton.addEventListener('click', () => {
+button.addEventListener('click', () => {
     points = generateNewPoints();
     drawScene();
 });
