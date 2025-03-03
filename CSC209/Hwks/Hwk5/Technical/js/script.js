@@ -25,7 +25,7 @@ function drawVector(point) {
     ctx.beginPath();
     ctx.moveTo(point.x, point.y);
     ctx.lineTo(point.x + point.vector.x, point.y + point.vector.y);
-    ctx.strokeStyle = vector.color;
+    ctx.strokeStyle = point.color;
     ctx.lineWidth = 2;
     ctx.stroke();
 }
