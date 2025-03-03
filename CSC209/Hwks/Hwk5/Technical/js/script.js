@@ -8,9 +8,9 @@ const ctx = canvas.getContext('2d');
 //const vector = { x: 15, y: 15, color: 'blue' };
 
 const points = [
-    { x: 150, y: 150, radius: 10, color: 'red', vector: { x: 15, y: 15 } },
-    { x: 125, y: 125, radius: 10, color: 'green', vector: { x: -15, y: 15 } },
-    { x: 200, y: 100, radius: 10, color: 'blue', vector: { x: 15, y: -15 } }
+    { x: Math.random() * (300-1) + 1, y: Math.random() * (300-1) + 1, radius: 10, color: 'red', vector: { x: 15, y: 15 } },
+    { x: Math.random() * (300-1) + 1, y: Math.random() * (300-1) + 1, radius: 10, color: 'green', vector: { x: -15, y: 15 } },
+    { x: Math.random() * (300-1) + 1, y: Math.random() * (300-1) + 1, radius: 10, color: 'blue', vector: { x: 15, y: -15 } }
 ];
 // Draw the point
 function drawPoint(point) {
