@@ -19,16 +19,16 @@ const NRPTS = 3;
 function generateNewPoints(){
     const points = [];
     for(i = 0; i < NRPTS; i++){
-        points.append({
+        /*points.push({
             x: Math.random() * (300-1) + 1,
             y: Math.random() * (300-1) + 1,
             radius: 10, 
             color: `hsl(${Math.random() * 360}, 100%, 50%)`,
             vector: { x: (Math.random() - 0.5) * 50, y: (Math.random() - 0.5) * 100 }
-    })
-    return(points);
-    console.log(points);
+    })*/
+        points[i] = { x: Math.random() * (300-1) + 1, y: Math.random() * (300-1) + 1, radius: 10, color: `hsl(${Math.random() * 360}, 100%, 50%)`, vector: { x: (Math.random() - 0.5) * 50, y: (Math.random() - 0.5) * 100 } }
     }
+    return(points);
 }
 
 // Draw the point
