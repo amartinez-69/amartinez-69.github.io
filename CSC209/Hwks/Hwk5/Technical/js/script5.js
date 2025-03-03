@@ -78,7 +78,7 @@ button.addEventListener('click', () => {
         drawScene();
         updatePoints();
     }, intervalTime); */
-    animate();
+    animate(60);
 }); 
 
 ;
