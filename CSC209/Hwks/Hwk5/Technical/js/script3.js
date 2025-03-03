@@ -27,7 +27,7 @@ function generateNewPoints(){
             vector: { x: (Math.random() - 0.5) * 50, y: (Math.random() - 0.5) * 100 }
     })
     return(points);
-
+    console.log(points);
     }
 }
 
