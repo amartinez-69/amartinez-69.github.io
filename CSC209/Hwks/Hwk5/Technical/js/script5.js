@@ -66,7 +66,6 @@ setInterval(() => {
 // Update points when button is clicked
 button.addEventListener('click', () => {
     drawScene();
-    animate();
 }); 
 
 ;
