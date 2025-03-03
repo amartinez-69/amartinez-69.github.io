@@ -41,7 +41,7 @@ function drawVector(point) {
 function drawScene() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for(let i = 0; i < points.length; i++){
-        generateNewLocations(point[i]);
+        generateNewLocations(points[i]);
         drawPoint(points[i]);
         drawVector(points[i]);
     }
