@@ -14,10 +14,9 @@ const points = [
 ];
 */
 
-//const NRPTS = 3;
+const NRPTS = 3;
 
 function generateNewPoints(){
-    const NRPTS = 3;
     const points = [];
     for(let i = 0; i < NRPTS; i++){
         points.push({
@@ -25,7 +24,7 @@ function generateNewPoints(){
             y: Math.random() * (300-1) + 1,
             radius: 10, 
             color: `hsl(${Math.random() * 360}, 100%, 50%)`,
-            vector: { x: (Math.random() - 0.5) * 50, y: (Math.random() - 0.5) * 50 }
+            vector: { x: (Math.random() - 0.5) * 50, y: (Math.random() - 0.5) * 100 }
     })
     return(points);
     }
@@ -50,7 +49,7 @@ function drawVector(point) {
 }
 
 // Draw the scene
-function drawScene(points) {
+function drawScene() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for(let i = 0; i < points.length; i++){
         drawPoint(points[i]);
@@ -60,6 +59,6 @@ function drawScene(points) {
 // Update points when button is clicked
 button.addEventListener('click', () => {
     points = generateNewPoints();
-    drawScene(points);
+    drawScene();
 });
  // Initial draw
