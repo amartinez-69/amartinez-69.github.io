@@ -61,7 +61,7 @@ function drawScene() {
 // Update points when button is clicked
 button.addEventListener('click', () => {
     drawScene();
-    const intervalTime = 50;
+    const intervalTime = 100;
     setInterval(() => {
         drawScene();
         updatePoints();
