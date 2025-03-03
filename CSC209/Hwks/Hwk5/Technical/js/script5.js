@@ -39,6 +39,14 @@ function drawVector(point) {
     ctx.stroke();
 }
 
+function updatePoints() {
+    for(i = 0; i < points.length; i++){
+        // Scale the vector by the speed factor
+        points[i].x += points[i].vector.x * NRSTEPS * 0.05;
+        points[i].y += points[i].vector.y * NRSTEPS * 0.05;
+    };
+}
+
 // Draw the scene
 function drawScene() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -48,25 +56,16 @@ function drawScene() {
         drawVector(points[i]);
     }
 }
-function animate(points){
-    for(let i = 0; i < points.length; i++){
-        points[i].x += NRSTEPS; // Update x position
-        points[i].y += NRSTEPS; // Update y position
-
-    // Bounce off walls
-        if (points[i].x + 10 > canvas.width || points[i].x - 10 < 0) {
-            NRSTEPS = -NRSTEPS;
-        }
-        if (points[i].y + 10 > canvas.height || points[i].y - 10 < 0) {
-            NRSTEPS = -NRSTEPS;
-        }
-    }
+        // Animation loop
+function animate() {
+    drawScene();
+    updatePoints();
+    requestAnimationFrame(animate);
 }
 
 // Update points when button is clicked
 button.addEventListener('click', () => {
     drawScene();
-    setInterval(animate, NRSTEPS);
 }); 
 
-// Initial draw
+animate();
