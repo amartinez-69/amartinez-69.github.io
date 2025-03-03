@@ -24,7 +24,7 @@ function generateNewPoints(){
             y: Math.random() * (300-1) + 1,
             radius: 10, 
             color: `hsl(${Math.random() * 360}, 100%, 50%)`,
-            vector: { x: (Math.random() - 0.5) * 100, y: (Math.random() - 0.5) * 100 }
+            vector: { x: (Math.random() - 0.5) * 50, y: (Math.random() - 0.5) * 50 }
     })
     return(points);
     }
