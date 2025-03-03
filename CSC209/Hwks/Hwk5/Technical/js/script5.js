@@ -66,6 +66,7 @@ function animate() {
 // Update points when button is clicked
 button.addEventListener('click', () => {
     drawScene();
+    animate();
 }); 
 
-animate();
+;
