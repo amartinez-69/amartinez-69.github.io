@@ -18,8 +18,8 @@ const NRPTS = 3;
 
 function generateNewPoints(){
     const points = [];
-    while(points.length < NRPTS){
-        points.push({
+    for(i = 0; i < NRPTS; i++){
+        points.append({
             x: Math.random() * (300-1) + 1,
             y: Math.random() * (300-1) + 1,
             radius: 10, 
