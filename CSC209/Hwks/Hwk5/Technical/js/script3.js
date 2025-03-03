@@ -16,8 +16,8 @@ const points = [
 // Draw the point
 
 function generateNewLocations(point){
-    point.x = Math.random() * (300-1) + 1;
-    point.y = Math.random() * (300-1) + 1;
+    point.x = Math.random() * (290-1) + 1;
+    point.y = Math.random() * (290-1) + 1;
 }
 
 function drawPoint(point) {
