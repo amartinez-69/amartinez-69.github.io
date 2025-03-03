@@ -63,7 +63,7 @@ button.addEventListener('click', () => {
     drawScene();
     const intervalTime = 80;
     setInterval(() => {
-        drawScene();
+        //drawScene();
         updatePoints();
     }, intervalTime); 
 }); 
