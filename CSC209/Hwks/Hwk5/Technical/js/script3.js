@@ -15,12 +15,11 @@ const points = [
 ];
 // Draw the point
 
-function generateNewLocations(points){
-    for(point in points){
-        point.x = Math.random() * (300-1) + 1;
-        point.y = Math.random() * (300-1) + 1;
-    }
+function generateNewLocations(point){
+    point.x = Math.random() * (300-1) + 1;
+    point.y = Math.random() * (300-1) + 1;
 }
+
 function drawPoint(point) {
     ctx.beginPath();
     ctx.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
@@ -41,8 +40,8 @@ function drawVector(point) {
 // Draw the scene
 function drawScene() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    generateNewLocations(points);
     for(let i = 0; i < points.length; i++){
+        generateNewLocations(point[i]);
         drawPoint(points[i]);
         drawVector(points[i]);
     }
