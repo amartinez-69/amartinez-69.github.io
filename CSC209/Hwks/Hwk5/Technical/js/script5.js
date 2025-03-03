@@ -51,7 +51,7 @@ function updatePoints() {
 function drawScene() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for(let i = 0; i < points.length; i++){
-        generateNewLocations(points[i]);
+        //generateNewLocations(points[i]);
         drawPoint(points[i]);
         drawVector(points[i]);
     }
@@ -60,10 +60,13 @@ function drawScene() {
 
 // Update points when button is clicked
 button.addEventListener('click', () => {
+    for(i =0; i < points.length; i++){
+        generateNewLocations(points[i]);
+    }
     drawScene();
     const intervalTime = 80;
     setInterval(() => {
-        //drawScene();
+        drawScene();
         updatePoints();
     }, intervalTime); 
 }); 
