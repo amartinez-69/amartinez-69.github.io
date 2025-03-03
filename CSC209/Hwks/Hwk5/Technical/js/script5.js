@@ -58,14 +58,27 @@ function drawScene() {
 }
         // Animation loop
 
+let lastTime = 0;
+const frameDelay = 1000 / 60; // 60 FPS (or adjust for slower updates)
+        
+function animate(timestamp) {
+    if (timestamp - lastTime >= frameDelay) {
+        drawScene();
+        updatePoints();
+        lastTime = timestamp;
+        }
+        requestAnimationFrame(animate);  // Call again to continue the animation
+    }
+
 // Update points when button is clicked
 button.addEventListener('click', () => {
     drawScene();
     const intervalTime = 100;
-    setInterval(() => {
+    /*setInterval(() => {
         drawScene();
         updatePoints();
-    }, intervalTime); 
+    }, intervalTime); */
+    animate();
 }); 
 
 ;
