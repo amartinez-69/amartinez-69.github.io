@@ -8,7 +8,7 @@ const button = document.getElementById("generateNewLocations");
 // Vector properties
 //const vector = { x: 15, y: 15, color: 'blue' };
 
-const NRSTEPS = 30;
+const NRSTEPS = 10;
 
 const points = [
     { x: 0, y: 0, radius: 10, color: 'red', vector: { x: 15, y: 15 } },
@@ -40,15 +40,11 @@ function drawVector(point) {
 }
 
 function updatePoints() {
-    points.forEach(point => {
-        let step = -1
-        while (step < NRSTEPS){
-            point.x += point.vector.x;
-            point.y += point.vector.y;
-            step++;
-        }
-        step = -1;
-    });
+    for(i = 0; i < points.length; i++){
+        // Scale the vector by the speed factor
+        points[i].x += points[i].vector.x * NRSTEPS * 0.05;
+        points[i].y += points[i].vector.y * NRSTEPS * 0.05;
+    };
 }
 
 // Draw the scene
@@ -62,27 +58,14 @@ function drawScene() {
 }
         // Animation loop
 
-//let lastTime = 0;
-//const frameDelay = 1000 / 60; // 60 FPS (or adjust for slower updates)
-        
-/*function animate(timestamp) {
-    if (timestamp - lastTime >= frameDelay) {
-        drawScene();
-        updatePoints();
-        lastTime = timestamp;
-        }
-        requestAnimationFrame(animate);  // Call again to continue the animation
-    }
-*/
 // Update points when button is clicked
 button.addEventListener('click', () => {
     drawScene();
-    //const intervalTime = 100;
-    /*setInterval(() => {
+    const intervalTime = 80;
+    setInterval(() => {
         drawScene();
         updatePoints();
-    }, intervalTime); */
-    updatePoints();
+    }, intervalTime); 
 }); 
 
 ;
