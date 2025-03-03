@@ -14,8 +14,6 @@ const points = [
 ];
 */
 
-const NRPTS = 3;
-
 function generateNewPoints(){
     const points = [];
     for(i = 0; i < NRPTS; i++){
