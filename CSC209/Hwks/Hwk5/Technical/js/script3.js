@@ -18,7 +18,7 @@ const NRPTS = 3;
 
 function generateNewPoints(){
     const points = [];
-    for(let i = 0; i < NRPTS; i++){
+    while(points.length < NRPTS){
         points.push({
             x: Math.random() * (300-1) + 1,
             y: Math.random() * (300-1) + 1,
@@ -27,6 +27,7 @@ function generateNewPoints(){
             vector: { x: (Math.random() - 0.5) * 50, y: (Math.random() - 0.5) * 100 }
     })
     return(points);
+
     }
 }
 
