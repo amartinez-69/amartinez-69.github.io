@@ -49,6 +49,4 @@ function drawScene() {
 // Update points when button is clicked
 button.addEventListener('click', () => {
     drawScene();
-});
-
-drawScene();  // Initial draw
+});  // Initial draw
