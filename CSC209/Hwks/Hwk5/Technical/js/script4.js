@@ -18,8 +18,8 @@ function generateNewPoints(){
     const points = [];
     for(i = 0; i < NRPTS; i++){
         points[i] = { 
-            x: Math.random() * (300-1) + 1, 
-            y: Math.random() * (300-1) + 1, 
+            x: Math.random() * (290-1) + 1, 
+            y: Math.random() * (290-1) + 1, 
             radius: 10, color: `hsl(${Math.random() * 360}, 100%, 50%)`, 
             vector: { x: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15, y: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15 } }
     }
