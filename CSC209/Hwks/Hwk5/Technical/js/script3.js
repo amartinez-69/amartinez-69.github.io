@@ -61,5 +61,4 @@ button.addEventListener('click', () => {
     points = generateNewPoints();
     drawScene(points);
 });
-
-drawScene();  // Initial draw
+ // Initial draw
