@@ -8,6 +8,8 @@ const button = document.getElementById("generateNewLocations");
 // Vector properties
 //const vector = { x: 15, y: 15, color: 'blue' };
 
+const NRSTEPS = 30;
+
 const points = [
     { x: 0, y: 0, radius: 10, color: 'red', vector: { x: 15, y: 15 } },
     { x: 0, y: 0, radius: 10, color: 'green', vector: { x: -15, y: 15 } },
@@ -53,15 +55,25 @@ function drawScene() {
         drawVector(points[i]);
     }
 }
+function animate(points){
+    for(let i = 0; i < points.length; i++){
+        points[i].x += NRSTEPS; // Update x position
+        points[i].y += NRSTEPS; // Update y position
 
-function animate() {
-    drawScene();
-    updatePoints();
-    requestAnimationFrame(animate);
+    // Bounce off walls
+        if (points[i].x + 10 > canvas.width || points[i].x - 10 < 0) {
+            NRSTEPS = -NRSTEPS;
+        }
+        if (points[i].y + 10 > canvas.height || points[i].y - 10 < 0) {
+            NRSTEPS = -NRSTEPS;
+        }
+    }
 }
+
 // Update points when button is clicked
 button.addEventListener('click', () => {
     drawScene();
+    setInterval(movePoints, NRSTEPS);
 }); 
 
-animate()// Initial draw
+// Initial draw
