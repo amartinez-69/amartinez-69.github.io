@@ -40,11 +40,14 @@ function drawVector(point) {
 // Draw the scene
 function drawScene() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for(let i = 0; i < points.length; i++){
-        generateNewLocations(point[i]);
-        drawPoint(points[i]);
-        drawVector(points[i]);
-    }
+    button.addEventListener('click', () => {
+        for(let i = 0; i < points.length; i++){
+            generateNewLocations(point[i]);
+            drawPoint(points[i]);
+            drawVector(points[i]);
+        }
+    });
 }
+// Update points when button is clicked
 
 drawScene();  // Initial draw
