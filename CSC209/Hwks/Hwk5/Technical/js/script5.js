@@ -40,11 +40,15 @@ function drawVector(point) {
 }
 
 function updatePoints() {
-    for(i = 0; i < points.length; i++){
-        // Scale the vector by the speed factor
-        points[i].x += points[i].vector.x * NRSTEPS * 0.005;
-        points[i].y += points[i].vector.y * NRSTEPS * 0.005;
-    };
+    points.forEach(point => {
+        let step = -1
+        while (step < NRSTEPS){
+            point.x += point.vector.x;
+            point.y += point.vector.y;
+            step++;
+        }
+        step = -1;
+    });
 }
 
 // Draw the scene
@@ -58,10 +62,10 @@ function drawScene() {
 }
         // Animation loop
 
-let lastTime = 0;
-const frameDelay = 1000 / 60; // 60 FPS (or adjust for slower updates)
+//let lastTime = 0;
+//const frameDelay = 1000 / 60; // 60 FPS (or adjust for slower updates)
         
-function animate(timestamp) {
+/*function animate(timestamp) {
     if (timestamp - lastTime >= frameDelay) {
         drawScene();
         updatePoints();
@@ -69,7 +73,7 @@ function animate(timestamp) {
         }
         requestAnimationFrame(animate);  // Call again to continue the animation
     }
-
+*/
 // Update points when button is clicked
 button.addEventListener('click', () => {
     drawScene();
@@ -78,7 +82,7 @@ button.addEventListener('click', () => {
         drawScene();
         updatePoints();
     }, intervalTime); */
-    animate(100);
+    updatePoints();
 }); 
 
 ;
