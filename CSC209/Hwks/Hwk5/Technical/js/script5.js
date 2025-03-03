@@ -57,11 +57,11 @@ function drawScene() {
     }
 }
         // Animation loop
-function animate() {
+const intervalTime = 50;
+setInterval(() => {
     drawScene();
     updatePoints();
-    requestAnimationFrame(animate);
-}
+    }, intervalTime); 
 
 // Update points when button is clicked
 button.addEventListener('click', () => {
