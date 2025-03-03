@@ -9,9 +9,9 @@ const button = document.getElementById("generateNewLocations");
 //const vector = { x: 15, y: 15, color: 'blue' };
 
 const points = [
-    { x, y, radius: 10, color: 'red', vector: { x: 15, y: 15 } },
-    { x, y, radius: 10, color: 'green', vector: { x: -15, y: 15 } },
-    { x, y, radius: 10, color: 'blue', vector: { x: 15, y: -15 } }
+    { x: 0, y: 0, radius: 10, color: 'red', vector: { x: 15, y: 15 } },
+    { x: 0, y: 0, radius: 10, color: 'green', vector: { x: -15, y: 15 } },
+    { x: 0, y: 0, radius: 10, color: 'blue', vector: { x: 15, y: -15 } }
 ];
 // Draw the point
 
