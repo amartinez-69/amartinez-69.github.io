@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 7</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let NRPTS = 0;
+        const NRSTEPS_MAX = 100;
+        let NRSTEPS = NRSTEPS_MAX;
+        let points = [];
+    </script>
+    <h1>Level 7</h1>
+    <p>How many points?</p>
+    <input id="numPoints"></input>
+    <button id="generateNewPoints">Generate Points</button> 
+    <br> </br>
+    <button id="animate">Animate</button>
+    <br> </br>
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+    <br> </br>
+    <button id="reset">Reset</button>
+    <script src="js/script9.js"></script>
+</body>
+</html>
