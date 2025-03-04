@@ -61,7 +61,7 @@ function updatePoints() {
         // Scale the vector by the speed factor
         points[i].x += points[i].vector.x * 0.5;
         points[i].y += points[i].vector.y * 0.5;
-        points[i].trail.push({ x: point.x, y: point.y });
+        points[i].trail.push({ x: points[i].x, y: points[i].y });
 
         // Keep the trail length within limits
         if (point.trail.length > 100) {
