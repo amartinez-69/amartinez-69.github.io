@@ -79,8 +79,8 @@ function updatePoints() {
             ctx.beginPath();
             //ctx.moveTo(points[i].trail[0].x, points[i].trail[0].y);
             for (let j = 1; j < points[i].trail.length; j++) {
-                ctx.moveTo(points[i].trail[0].x, points[i].trail[0].y);
-                ctx.lineTo(points[i].trail[j].x, points[i].trail[j].y);
+                ctx.moveTo(points[i].trail[j].x, points[i].trail[j].y);
+                ctx.lineTo(points[i].trail[j+1].x, points[i].trail[j+1].y);
             }
             ctx.strokeStyle = points[i].color;
             ctx.lineWidth = 2;
