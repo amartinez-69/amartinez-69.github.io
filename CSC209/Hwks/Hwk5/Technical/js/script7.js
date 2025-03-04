@@ -70,21 +70,15 @@ function drawScene() {
     }
 }
 // Update points when button is clicked
-/*button.addEventListener('click', () => {
+button.addEventListener('click', () => {
     points = generateNewPoints();
     NRSTEPS = NRSTEPS_MAX;
     drawScene();
     animate();
-});*/
+});
 
 document.getElementById('numPoints').addEventListener('input', (e) => {
     NRPTS = parseInt(e.target.value, 10);
-    points = generateRandomPoints();
-    button.addEventListener('click', () => {
-        NRSTEPS = NRSTEPS_MAX;
-        drawScene();
-        animate();
-    });
-    
+    points = generateNewPoints();
 });
  // Initial draw
