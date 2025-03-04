@@ -82,7 +82,7 @@ function updatePoints() {
                 ctx.lineTo(points[i].trail[j].x, points[i].trail[j].y);
             }
             ctx.strokeStyle = points[i].color;
-            ctx.lineWidth = 1;
+            ctx.lineWidth = 2;
             ctx.stroke();
             console.log(points[i].trail);
         }
