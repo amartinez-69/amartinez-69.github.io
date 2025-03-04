@@ -72,24 +72,31 @@ function drawScene() {
     }
 }
 
-document.getElementById('numPoints').addEventListener('input', (e) => {
+// Handle number of points input change
+numPointsInput.addEventListener('input', (e) => {
     NRPTS = parseInt(e.target.value, 10);
-    button.addEventListener('click', () => {
-        points = generateNewPoints();
-        let originalPoints = points;
-        drawScene();
-        resetBtn.addEventListener('click', () =>{
-            points = originalPoints;
-            drawScene();
-        })
-    });
-    animateBtn.addEventListener('click', () => {
-        //points = generateNewPoints();
-        NRSTEPS = NRSTEPS_MAX;
-        drawScene();
-        animate();
-    });
+    points = generateNewPoints();  // Re-generate points based on input
+    originalPoints = JSON.parse(JSON.stringify(points));  // Store a deep copy for resetting
+    drawScene();
+});
 
+// Handle "Generate New Points" button click
+button.addEventListener('click', () => {
+    points = generateNewPoints();
+    originalPoints = JSON.parse(JSON.stringify(points));  // Store a deep copy for resetting
+    drawScene();
+});
+
+// Handle "Reset" button click
+resetBtn.addEventListener('click', () => {
+    points = JSON.parse(JSON.stringify(originalPoints));  // Reset points to the original state
+    drawScene();
+});
+
+// Handle "Animate" button click
+animateBtn.addEventListener('click', () => {
+    NRSTEPS = NRSTEPS_MAX;  // Reset steps
+    animate();  // Start the animation
 });
 
  // Initial draw
