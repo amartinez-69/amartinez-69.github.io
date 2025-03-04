@@ -77,7 +77,7 @@ function updatePoints() {
                 const trailPoint = trail[i];
                 ctx.lineTo(trailPoint.x, trailPoint.y);
             }
-            ctx.strokeStyle = point[i].color;  // Semi-transparent black for trace
+            ctx.strokeStyle = points[i].color;  
             ctx.lineWidth = 1;
             ctx.stroke();
         }
