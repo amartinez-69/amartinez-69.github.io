@@ -1,3 +1,6 @@
+let NRSTEPS = NRSTEPS_MAX;
+let points = [];
+
 function generateNewPoints(){
     for(i = 0; i < NRPTS; i++){
         points[i] = { 
