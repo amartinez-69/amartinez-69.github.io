@@ -1,10 +1,9 @@
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 const button = document.getElementById("generateNewPoints");
-const numPoints = document.getElementById("numPoints");
+const NRPTS = parseInt(document.getElementById("numPoints")).valueOf;
 
 function generateNewPoints(){
-    var NRPTS = parseInt(numPoints).value;
     for(i = 0; i < NRPTS; i++){
         points[i] = { 
             x: Math.random() * (290-1) + 1, 
