@@ -61,6 +61,7 @@ function animate() {
     intervalID = setInterval(() => {
         //drawScene();
         updatePoints();
+        drawScene();
     }, 80);
 }
 
