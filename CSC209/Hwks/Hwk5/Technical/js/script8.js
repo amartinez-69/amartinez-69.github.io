@@ -9,8 +9,8 @@ function generateNewPoints(){
         points[i] = { 
             x: Math.random() * (290-1) + 1, 
             y: Math.random() * (290-1) + 1, 
-            originalX: x,
-            originalY: y,
+            originalX: points[i].x,
+            originalY: points[i].y,
             radius: 10, color: `hsl(${Math.random() * 360}, 100%, 50%)`, 
             vector: { x: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15, y: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15 } }
     }
