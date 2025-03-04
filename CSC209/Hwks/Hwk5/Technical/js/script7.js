@@ -4,7 +4,7 @@ const button = document.getElementById("generateNewPoints");
 const numPoints = document.getElementById("numPoints");
 
 function generateNewPoints(){
-    var NRPTS = parseInt(numPoints).value;
+    var NRPTS = numPoints;
     for(i = 0; i < NRPTS; i++){
         points[i] = { 
             x: Math.random() * (290-1) + 1, 
