@@ -80,5 +80,12 @@ button.addEventListener('click', () => {
 document.getElementById('numPoints').addEventListener('input', (e) => {
     NRPTS = parseInt(e.target.value, 10);
     points = generateNewPoints();
+    button.addEventListener('click', () => {
+        points = generateNewPoints();
+        NRSTEPS = NRSTEPS_MAX;
+        drawScene();
+        animate();
+    });
+    
 });
  // Initial draw
