@@ -73,13 +73,14 @@ function updatePoints() {
             ctx.beginPath();
             ctx.moveTo(points[i].x, points[i].y);
             // Draw lines for the trail (previous positions)
-            for (i = 0; i< trail.length - 1; i++) {
-                trailPoint = trail[i];
+            for (let i = trail.length - 1; i >= 0; i--) {
+                const trailPoint = trail[i];
                 ctx.lineTo(trailPoint.x, trailPoint.y);
-                ctx.strokeStyle = points[i].color;  
-                ctx.lineWidth = 2;
-                ctx.stroke();
             }
+            ctx.strokeStyle = points[i].color;  
+            ctx.lineWidth = 1;
+            ctx.stroke();
+        }
     }
     
     if (NRSTEPS > 0){
