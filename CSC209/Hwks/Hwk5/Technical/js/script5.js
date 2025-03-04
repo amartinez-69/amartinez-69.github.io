@@ -42,14 +42,16 @@ function drawVector(point) {
 function updatePoints() {
     for(i = 0; i < points.length; i++){
         // Scale the vector by the speed factor
-        points[i].x += points[i].vector.x * NRSTEPS * 0.05;
-        points[i].y += points[i].vector.y * NRSTEPS * 0.05;
-        if(points[i].x == canvas.width || points[i].x == 0 || points[i].y == canvas.height || points[i].y == 0 ){
-            points[i].vector.x *= -1;
-            points[i].vector.y *= -1; 
+        points[i].x += points[i].vector.x * NRSTEPS;
+        points[i].y += points[i].vector.y * NRSTEPS;
+        if (point.x <= 0 || point.x >= canvas.width) {
+            point.velocity.x = -point.velocity.x; // Reverse x velocity
         }
-        updatePoints();
-    };
+
+        if (point.y <= 0 || point.y >= canvas.height) {
+            point.velocity.y = -point.velocity.y; // Reverse y velocity
+        }
+    }
 }
 
 // Draw the scene
