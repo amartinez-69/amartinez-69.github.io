@@ -1,7 +1,7 @@
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 const button = document.getElementById("generateNewPoints");
-const NRPTS = parseInt(document.getElementById("numPoints")).valueOf;
+const NRPTS = parseInt(document.getElementById("numPoints"));
 
 function generateNewPoints(){
     for(i = 0; i < NRPTS; i++){
