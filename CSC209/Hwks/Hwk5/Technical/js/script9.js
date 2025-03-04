@@ -46,7 +46,7 @@ function drawTrace(point) {
         ctx.beginPath();
         ctx.moveTo(point.x, point.y);
         // Draw lines for the trail (previous positions)
-        for (let i = point.trail.length - 1; i >= 0; i--) {
+        for (let i = trail.length - 1; i >= 0; i--) {
             const trailPoint = trail[i];
             ctx.lineTo(trailPoint.x, trailPoint.y);
         }
