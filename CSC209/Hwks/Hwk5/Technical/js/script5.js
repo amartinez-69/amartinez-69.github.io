@@ -8,7 +8,8 @@ const button = document.getElementById("generateNewLocations");
 // Vector properties
 //const vector = { x: 15, y: 15, color: 'blue' };
 
-const NRSTEPS = 10;
+const NRSTEPS_MAX = 10;
+let NRSTEPS = NRSTEPS_MAX;
 
 const points = [
     { x: 0, y: 0, radius: 10, color: 'red', vector: { x: 15, y: 15 } },
@@ -52,17 +53,17 @@ function updatePoints() {
             points[i].vector.y = -points[i].vector.y; // Reverse y velocity
         }
     }
-    if (NRSTEPS > 0) {
-        NRSTEPS--;
-    } else {
+    if (NRSTEPS <= 0) {
         clearInterval(intervalID); // Stop animation when NRSTEPS reaches zero
     }
 
 }
 
-function animate(){
-    //NRSTEPS = 10; // Reset steps
-    intervalID = setInterval(updatePoints, 80);
+function animate() {
+    intervalID = setInterval(() => {
+        drawScene();
+        updatePoints();
+    }, 80);
 }
 
 // Draw the scene
@@ -81,12 +82,7 @@ button.addEventListener('click', () => {
     for(i =0; i < points.length; i++){
         generateNewLocations(points[i]);
     }
+    NRSTEPS = NRSTEPS_MAX;
     drawScene();
-    const intervalTime = 80;
-    setInterval(() => {
-        drawScene();
-        updatePoints();
-    }, intervalTime); 
-}); 
-
-;
+    animate();
+});
