@@ -5,6 +5,8 @@ const animateBtn = document.getElementById("animate");
 const resetBtn = document.getElementById("reset");
 const showTraceCheckbox = document.getElementById('showTrace');
 
+var trail = [];
+
 function generateNewPoints(){
     for(i = 0; i < NRPTS; i++){
         let x = Math.random() * (290-1) + 1
@@ -16,7 +18,6 @@ function generateNewPoints(){
             originalY: y,
             radius: 10, color: `hsl(${Math.random() * 360}, 100%, 50%)`, 
             vector: { x: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15, y: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15 } }
-            trail: []
     }
     return(points);
 }
@@ -46,7 +47,7 @@ function drawTrace(point) {
         ctx.moveTo(point.x, point.y);
         // Draw lines for the trail (previous positions)
         for (let i = point.trail.length - 1; i >= 0; i--) {
-            const trailPoint = point.trail[i];
+            const trailPoint = trail[i];
             ctx.lineTo(trailPoint.x, trailPoint.y);
         }
         ctx.strokeStyle = point.color;  // Semi-transparent black for trace
@@ -61,7 +62,7 @@ function updatePoints() {
         points[i].x += points[i].vector.x * 0.5;
         points[i].y += points[i].vector.y * 0.5;
         points[i].trail.push({ x: points[i].x, y: points[i].y });
-        
+
         if (points[i].x <= 0 || points[i].x >= canvas.width) {
             points[i].vector.x = -points[i].vector.x; // Reverse x velocity
         }
