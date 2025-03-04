@@ -67,7 +67,7 @@ button.addEventListener('click', () => {
     for(i =0; i < points.length; i++){
         generateNewLocations(points[i]);
     }
-    drawScene();
+    //drawScene();
     const intervalTime = 80;
     setInterval(() => {
         drawScene();
