@@ -42,8 +42,8 @@ function drawVector(point) {
 function updatePoints() {
     for(i = 0; i < points.length; i++){
         // Scale the vector by the speed factor
-        points[i].x += points[i].vector.x * NRSTEPS;
-        points[i].y += points[i].vector.y * NRSTEPS;
+        points[i].x += points[i].vector.x + NRSTEPS;
+        points[i].y += points[i].vector.y + NRSTEPS;
         /*if (point[i].x <= 0 || point[i].x >= canvas.width) {
             point[i].vector.x = -point[i].vector.x; // Reverse x velocity
         }
