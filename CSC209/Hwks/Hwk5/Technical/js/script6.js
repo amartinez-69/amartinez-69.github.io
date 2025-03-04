@@ -4,7 +4,6 @@ const button = document.getElementById("generateNewPoints");
 
 const NRSTEPS_MAX = 30;
 let NRSTEPS = NRSTEPS_MAX;
-let points = [];
 
 function generateNewPoints(){
     const points = [];
@@ -48,6 +47,9 @@ function updatePoints() {
         if (points[i].y <= 0 || points[i].y >= canvas.height) {
             points[i].vector.y = -points[i].vector.y; // Reverse y velocity
         }
+    }
+    if (NRSTEPS > 0){
+        NRSTEPS--;
     }
     if (NRSTEPS <= 0) {
         clearInterval(intervalID); // Stop animation when NRSTEPS reaches zero
