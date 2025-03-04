@@ -2,17 +2,6 @@ const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 const button = document.getElementById("generateNewLocations");
 
-// Point properties
-//const point = { x: 150, y: 150, radius: 10, color: 'blue' };
-
-// Vector properties
-//const vector = { x: 15, y: 15, color: 'blue' };
-
-const points = [
-    { x: 0, y: 0, radius: 10, color: 'red', vector: { x: 15, y: 15 } },
-    { x: 0, y: 0, radius: 10, color: 'green', vector: { x: -15, y: 15 } },
-    { x: 0, y: 0, radius: 10, color: 'blue', vector: { x: 15, y: -15 } }
-];
 // Draw the point
 
 function generateNewLocations(point){
