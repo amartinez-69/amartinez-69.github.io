@@ -101,7 +101,6 @@ animateBtn.addEventListener('click', () => {
 
 resetBtn.addEventListener('click', () => {
     reset();
-    drawScene();
 })
 
  // Initial draw
