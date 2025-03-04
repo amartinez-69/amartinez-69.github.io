@@ -100,6 +100,7 @@ animateBtn.addEventListener('click', () => {
 });
 
 resetBtn.addEventListener('click', () => {
+    clearInterval(intervalID);
     reset();
 })
 
