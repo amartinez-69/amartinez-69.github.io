@@ -52,11 +52,10 @@ function updatePoints() {
         }
         if (showTraceCheckbox.checked) {
             ctx.beginPath();
-            ctx.arc(point[i].x, point[i].y, point.radius, 0, Math.PI * 2);
-            ctx.strokeStyle = `rgba(0, 0, 0, 0.5)`; // Semi-transparent black for trace
+            ctx.arc(points[i].x, points[i].y, points.radius, 0, Math.PI * 2);
+            ctx.strokeStyle = points[i].color; // Semi-transparent black for trace
             ctx.stroke();
         }
-    }
     }
     if (NRSTEPS > 0){
         NRSTEPS--;
