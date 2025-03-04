@@ -16,7 +16,7 @@ function generateNewPoints(){
             originalY: y,
             radius: 10, color: `hsl(${Math.random() * 360}, 100%, 50%)`, 
             vector: { x: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15, y: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15 } }
-            trail: [];
+            trail: []
     }
     return(points);
 }
@@ -57,6 +57,7 @@ function drawTrace(point) {
 
 function updatePoints() {
     for(i = 0; i < points.length; i++){
+        points[i].trail.push({ x: points[i].x, y: points[i].y });
         // Scale the vector by the speed factor
         points[i].x += points[i].vector.x * 0.5;
         points[i].y += points[i].vector.y * 0.5;
@@ -68,7 +69,7 @@ function updatePoints() {
             points[i].vector.y = -points[i].vector.y; // Reverse y velocity
         }
     }
-    }
+    
     if (NRSTEPS > 0){
         NRSTEPS--;
     }
