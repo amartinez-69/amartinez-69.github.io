@@ -76,15 +76,19 @@ function updatePoints() {
             points[i].vector.y = -points[i].vector.y; // Reverse y velocity
         }
         if (showTraceCheckbox.checked) {
-            ctx.beginPath();
+            //ctx.beginPath();
             //ctx.moveTo(points[i].trail[0].x, points[i].trail[0].y);
             for (j = 1; j < points[i].trail.length; j++) {
+                ctx.beginPath();
                 ctx.moveTo(points[i].trail[j-1].x, points[i].trail[j-1].y);
                 ctx.lineTo(points[i].trail[j].x, points[i].trail[j].y);
+                ctx.strokeStyle = points[i].color;
+                ctx.lineWidth = 2;
+                ctx.stroke();
             }
-            ctx.strokeStyle = points[i].color;
-            ctx.lineWidth = 2;
-            ctx.stroke();
+            //ctx.strokeStyle = points[i].color;
+            //ctx.lineWidth = 2;
+            //ctx.stroke();
             console.log(points[i].trail);
         }
     }
