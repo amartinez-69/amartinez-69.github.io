@@ -4,9 +4,9 @@ const button = document.getElementById("generateNewPoints");
 
 const NRSTEPS_MAX = 30;
 let NRSTEPS = NRSTEPS_MAX;
+const points = [];
 
 function generateNewPoints(){
-    const points = [];
     for(i = 0; i < NRPTS; i++){
         points[i] = { 
             x: Math.random() * (290-1) + 1, 
