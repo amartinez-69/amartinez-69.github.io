@@ -53,13 +53,14 @@ function updatePoints() {
         }
         if (showTraceCheckbox.checked) {
             for(i = 0; i < vectors.length; i++){
-                drawVector()
-            }
-            /*ctx.beginPath();
-            ctx.arc(points[i].x, points[i].y, points.radius, 0, Math.PI * 2);
-            ctx.strokeStyle = points[i].color; // Semi-transparent black for trace
-            ctx.stroke();*/
+                ctx.beginPath();
+                ctx.moveTo(vectors[i].x, vectors[i].y);
+                ctx.lineTo(vectors[i+1].x, vectors[i+1].y);
+                //ctx.strokeStyle = point.color;
+                ctx.lineWidth = 2;
+                ctx.stroke();
         }
+    }
     }
     if (NRSTEPS > 0){
         NRSTEPS--;
