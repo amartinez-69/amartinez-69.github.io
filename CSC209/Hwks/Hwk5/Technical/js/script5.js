@@ -48,6 +48,7 @@ function updatePoints() {
             points[i].vector.x *= -1;
             points[i].vector.y *= -1; 
         }
+        updatePoints();
     };
 }
 
