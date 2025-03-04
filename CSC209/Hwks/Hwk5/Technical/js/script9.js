@@ -57,10 +57,11 @@ function drawTrace(point) {
 
 function updatePoints() {
     for(i = 0; i < points.length; i++){
-        points[i].trail.push({ x: points[i].x, y: points[i].y });
         // Scale the vector by the speed factor
         points[i].x += points[i].vector.x * 0.5;
         points[i].y += points[i].vector.y * 0.5;
+        points[i].trail.push({ x: points[i].x, y: points[i].y });
+        
         if (points[i].x <= 0 || points[i].x >= canvas.width) {
             points[i].vector.x = -points[i].vector.x; // Reverse x velocity
         }
