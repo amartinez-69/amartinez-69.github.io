@@ -71,7 +71,7 @@ function updatePoints() {
         }
         if (showTraceCheckbox.checked) {
             ctx.beginPath();
-            ctx.moveTo(point[i].x, point[i].y);
+            ctx.moveTo(points[i].x, points[i].y);
             // Draw lines for the trail (previous positions)
             for (let i = trail.length - 1; i >= 0; i--) {
                 const trailPoint = trail[i];
