@@ -4,7 +4,7 @@ const button = document.getElementById("generateNewPoints");
 
 const NRSTEPS_MAX = 30;
 let NRSTEPS = NRSTEPS_MAX;
-const points = [];
+let points = [];
 
 function generateNewPoints(){
     for(i = 0; i < NRPTS; i++){
