@@ -78,7 +78,7 @@ function updatePoints() {
         if (showTraceCheckbox.checked) {
             ctx.beginPath();
             //ctx.moveTo(points[i].trail[0].x, points[i].trail[0].y);
-            for (let j = 0; j < points[i].trail.length; j++) {
+            for (let j = 1; j < points[i].trail.length; j++) {
                 ctx.moveTo(points[i].trail[0].x, points[i].trail[0].y);
                 ctx.lineTo(points[i].trail[j].x, points[i].trail[j].y);
             }
