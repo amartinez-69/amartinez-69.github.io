@@ -59,8 +59,9 @@ function updatePoints() {
 
 function animate() {
     intervalID = setInterval(() => {
-        drawScene();
+        //drawScene();
         updatePoints();
+        drawScene();
     }, 80);
 }
 
