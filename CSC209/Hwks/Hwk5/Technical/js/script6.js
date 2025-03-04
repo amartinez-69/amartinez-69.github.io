@@ -36,7 +36,7 @@ function drawVector(point) {
     ctx.stroke();
 }
 
-function updatePoints(points) {
+function updatePoints() {
     for(i = 0; i < points.length; i++){
         // Scale the vector by the speed factor
         points[i].x += points[i].vector.x * 0.5;
@@ -55,10 +55,10 @@ function updatePoints(points) {
 
 }
 
-function animate(points) {
+function animate() {
     intervalID = setInterval(() => {
         drawScene();
-        updatePoints(points);
+        updatePoints();
     }, 80);
 }
 
@@ -75,6 +75,6 @@ button.addEventListener('click', () => {
     points = generateNewPoints();
     NRSTEPS = NRSTEPS_MAX;
     drawScene();
-    animate(points);
+    animate();
 });
  // Initial draw
