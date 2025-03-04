@@ -64,8 +64,8 @@ function updatePoints() {
         points[i].trail.push({ x: points[i].x, y: points[i].y });
 
         // Keep the trail length within limits
-        if (point.trail.length > 100) {
-            point.trail.shift();
+        if (points[i].trail.length > 100) {
+            points[i].trail.shift();
         }
 
         if (points[i].x <= 0 || points[i].x >= canvas.width) {
