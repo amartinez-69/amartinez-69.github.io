@@ -26,13 +26,6 @@ function drawPoint(point) {
     ctx.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
     ctx.strokeStyle = point.color;
     ctx.stroke();  
-
-    if (showTraceCheckbox.checked) {
-        ctx.beginPath();
-        ctx.arc(point.originalX, point.originalY, point.radius, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(0, 0, 0, 0.5)`; // Semi-transparent black for trace
-        ctx.stroke();
-    }
 }
 
 // Draw the vector
@@ -57,6 +50,13 @@ function updatePoints() {
         if (points[i].y <= 0 || points[i].y >= canvas.height) {
             points[i].vector.y = -points[i].vector.y; // Reverse y velocity
         }
+        if (showTraceCheckbox.checked) {
+            ctx.beginPath();
+            ctx.arc(point[i].x, point[i].y, point.radius, 0, Math.PI * 2);
+            ctx.strokeStyle = `rgba(0, 0, 0, 0.5)`; // Semi-transparent black for trace
+            ctx.stroke();
+        }
+    }
     }
     if (NRSTEPS > 0){
         NRSTEPS--;
@@ -64,7 +64,6 @@ function updatePoints() {
     if (NRSTEPS <= 0) {
         clearInterval(intervalID); // Stop animation when NRSTEPS reaches zero
     }
-
 }
 
 function animate() {
@@ -73,6 +72,7 @@ function animate() {
         updatePoints();
         drawScene();
     }, 80);
+
 }
 
 // Draw the scene
