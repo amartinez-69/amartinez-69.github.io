@@ -15,7 +15,9 @@ function generateNewPoints(){
             originalX: x,
             originalY: y,
             radius: 10, color: `hsl(${Math.random() * 360}, 100%, 50%)`, 
-            vector: { x: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15, y: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15 } }
+            vector: { x: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15, y: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15 },
+            trail: []
+         }
     }
     return(points);
 }
@@ -56,11 +58,15 @@ function drawTrace(point) {
 
 function updatePoints() {
     for(i = 0; i < points.length; i++){
-        var trail = [];
         // Scale the vector by the speed factor
         points[i].x += points[i].vector.x * 0.5;
         points[i].y += points[i].vector.y * 0.5;
-        trail.push({ x: points[i].x, y: points[i].y });
+        points[i].trail.push({ x: point.x, y: point.y });
+
+        // Keep the trail length within limits
+        if (point.trail.length > 100) {
+            point.trail.shift();
+        }
 
         if (points[i].x <= 0 || points[i].x >= canvas.width) {
             points[i].vector.x = -points[i].vector.x; // Reverse x velocity
@@ -71,13 +77,11 @@ function updatePoints() {
         }
         if (showTraceCheckbox.checked) {
             ctx.beginPath();
-            ctx.moveTo(points[i].x, points[i].y);
-            // Draw lines for the trail (previous positions)
-            for (let i = trail.length - 1; i >= 0; i--) {
-                const trailPoint = trail[i];
-                ctx.lineTo(trailPoint.x, trailPoint.y);
+            ctx.moveTo(points[i].trail[0].x, points[i].trail[0].y);
+            for (let j = 1; j < points[i].trail.length; j++) {
+                ctx.lineTo(points[i].trail[j].x, points[i].trail[j].y);
             }
-            ctx.strokeStyle = points[i].color;  
+            ctx.strokeStyle = points[i].color;
             ctx.lineWidth = 1;
             ctx.stroke();
         }
