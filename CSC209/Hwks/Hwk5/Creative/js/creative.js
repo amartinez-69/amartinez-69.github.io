@@ -41,13 +41,13 @@ function updatePoints() {
     const tempValue = document.getElementById("temp").value;
     let temp = 0;
     if (tempValue == "high"){
-        temp = 0.5;
+        temp = 0.7;
     }
     if(tempValue == "medium"){
-        temp = 0.05;
+        temp = 0.07;
     }
     if(tempValue == "low"){
-        temp = 0.005;
+        temp = 0.007;
     }
     for(i = 0; i < points.length; i++){
         // Scale the vector by the speed factor
