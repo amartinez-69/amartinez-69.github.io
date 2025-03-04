@@ -46,7 +46,7 @@ function updatePoints() {
         points[i].y += points[i].vector.y * NRSTEPS * 0.05;
         if(points[i].x == canvas.width || points[i].x == 0 || points[i].y == canvas.height || points[i].y == 0 ){
             points[i].vector.x *= -1;
-            points[i].vector.y *= 1; 
+            points[i].vector.y *= -1; 
         }
     };
 }
