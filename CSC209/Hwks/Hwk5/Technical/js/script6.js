@@ -1,18 +1,6 @@
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 const button = document.getElementById("generateNewPoints");
-// Point properties
-//const point = { x: 150, y: 150, radius: 10, color: 'blue' };
-
-// Vector properties
-//const vector = { x: 15, y: 15, color: 'blue' };
-/*
-const points = [
-    { x: Math.random() * (300-1) + 1, y: Math.random() * (300-1) + 1, radius: 10, color: 'red', vector: { x: 15, y: 15 } },
-    { x: Math.random() * (300-1) + 1, y: Math.random() * (300-1) + 1, radius: 10, color: 'green', vector: { x: -15, y: 15 } },
-    { x: Math.random() * (300-1) + 1, y: Math.random() * (300-1) + 1, radius: 10, color: 'blue', vector: { x: 15, y: -15 } }
-];
-*/
 
 const NRSTEPS_MAX = 30;
 let NRSTEPS = NRSTEPS_MAX;
@@ -47,7 +35,7 @@ function drawVector(point) {
     ctx.stroke();
 }
 
-function updatePoints() {
+function updatePoints(points) {
     for(i = 0; i < points.length; i++){
         // Scale the vector by the speed factor
         points[i].x += points[i].vector.x * 0.5;
@@ -66,10 +54,10 @@ function updatePoints() {
 
 }
 
-function animate() {
+function animate(points) {
     intervalID = setInterval(() => {
         drawScene();
-        updatePoints();
+        updatePoints(points);
     }, 80);
 }
 
@@ -86,6 +74,6 @@ button.addEventListener('click', () => {
     points = generateNewPoints();
     NRSTEPS = NRSTEPS_MAX;
     drawScene();
-    animate();
+    animate(points);
 });
  // Initial draw
