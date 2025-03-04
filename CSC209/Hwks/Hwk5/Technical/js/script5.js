@@ -8,7 +8,7 @@ const button = document.getElementById("generateNewLocations");
 // Vector properties
 //const vector = { x: 15, y: 15, color: 'blue' };
 
-const NRSTEPS_MAX = 30;
+const NRSTEPS_MAX = 100;
 let NRSTEPS = NRSTEPS_MAX;
 
 const points = [
