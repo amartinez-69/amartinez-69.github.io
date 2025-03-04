@@ -1,6 +1,8 @@
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 const button = document.getElementById("generateNewPoints");
+const animateBtn = document.getElementById("animate");
+//const resetBtn = document.getElementById("reset");
 
 function generateNewPoints(){
     for(i = 0; i < NRPTS; i++){
@@ -69,23 +71,23 @@ function drawScene() {
         drawVector(points[i]);
     }
 }
-// Update points when button is clicked
-button.addEventListener('click', () => {
-    points = generateNewPoints();
-    NRSTEPS = NRSTEPS_MAX;
-    drawScene();
-    animate();
-});
 
 document.getElementById('numPoints').addEventListener('input', (e) => {
     NRPTS = parseInt(e.target.value, 10);
-    points = generateNewPoints();
     button.addEventListener('click', () => {
         points = generateNewPoints();
+        drawScene();
+    });
+    animateBtn.addEventListener('click', () => {
+        //points = generateNewPoints();
         NRSTEPS = NRSTEPS_MAX;
         drawScene();
         animate();
     });
-    
 });
+
+//resetBtn.addEventListener('click', () =>{
+
+//})
+
  // Initial draw
