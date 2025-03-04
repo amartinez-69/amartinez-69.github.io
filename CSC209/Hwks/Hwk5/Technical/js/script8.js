@@ -2,7 +2,7 @@ const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 const button = document.getElementById("generateNewPoints");
 const animateBtn = document.getElementById("animate");
-//const resetBtn = document.getElementById("reset");
+const resetBtn = document.getElementById("reset");
 
 function generateNewPoints(){
     for(i = 0; i < NRPTS; i++){
@@ -84,10 +84,10 @@ document.getElementById('numPoints').addEventListener('input', (e) => {
         drawScene();
         animate();
     });
+    resetBtn.addEventListener('click', () =>{
+        drawScene();
+    })
+
 });
-
-//resetBtn.addEventListener('click', () =>{
-
-//})
 
  // Initial draw
