@@ -44,13 +44,13 @@ function updatePoints() {
         // Scale the vector by the speed factor
         points[i].x += points[i].vector.x * NRSTEPS;
         points[i].y += points[i].vector.y * NRSTEPS;
-        if (point[i].x <= 0 || point[i].x >= canvas.width) {
+        /*if (point[i].x <= 0 || point[i].x >= canvas.width) {
             point[i].vector.x = -point[i].vector.x; // Reverse x velocity
         }
 
         if (point[i].y <= 0 || point[i].y >= canvas.height) {
             point[i].vector.y = -point[i].vector.y; // Reverse y velocity
-        }
+        }*/
     }
 }
 
