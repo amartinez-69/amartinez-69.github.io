@@ -3,7 +3,6 @@ const ctx = canvas.getContext('2d');
 const button = document.getElementById("generateNewPoints");
 const animateBtn = document.getElementById("animate");
 const resetBtn = document.getElementById("reset");
-const tempValue = document.getElementById("temp").value;
 
 function generateNewPoints(){
     for(i = 0; i < NRPTS; i++){
@@ -39,7 +38,8 @@ function drawVector(point) {
 }
 
 function updatePoints() {
-    var temp = 0;
+    const tempValue = document.getElementById("temp").value;
+    let temp = 0;
     if (tempValue == "high"){
         temp = 0.5;
     }
