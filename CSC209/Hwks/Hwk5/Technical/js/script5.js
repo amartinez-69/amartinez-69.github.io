@@ -44,6 +44,10 @@ function updatePoints() {
         // Scale the vector by the speed factor
         points[i].x += points[i].vector.x * NRSTEPS * 0.05;
         points[i].y += points[i].vector.y * NRSTEPS * 0.05;
+        if(points[i].x == canvas.width || points[i].x == 0 || points[i].y == canvas.height || points[i].y == 0 ){
+            points[i].vector.x *= -1;
+            points[i].vector.y *= 1; 
+        }
     };
 }
 
