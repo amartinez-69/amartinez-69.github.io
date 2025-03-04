@@ -2,7 +2,7 @@ const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 const button = document.getElementById("generateNewPoints");
 
-const NRSTEPS_MAX = 30;
+const NRSTEPS_MAX = 100;
 let NRSTEPS = NRSTEPS_MAX;
 let points = [];
 
