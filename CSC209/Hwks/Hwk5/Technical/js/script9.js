@@ -36,6 +36,7 @@ function drawVector(point) {
     ctx.strokeStyle = point.color;
     ctx.lineWidth = 2;
     ctx.stroke();
+    vectors.push({x: point.vector.x, y: point.vector.y})
 }
 
 function updatePoints() {
@@ -51,7 +52,9 @@ function updatePoints() {
             points[i].vector.y = -points[i].vector.y; // Reverse y velocity
         }
         if (showTraceCheckbox.checked) {
-            drawPoint(points[i]);
+            for(i = 0; i < vectors.length; i++){
+                drawVector()
+            }
             /*ctx.beginPath();
             ctx.arc(points[i].x, points[i].y, points.radius, 0, Math.PI * 2);
             ctx.strokeStyle = points[i].color; // Semi-transparent black for trace
