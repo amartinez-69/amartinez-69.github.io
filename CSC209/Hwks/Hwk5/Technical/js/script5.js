@@ -53,6 +53,9 @@ function updatePoints() {
             points[i].vector.y = -points[i].vector.y; // Reverse y velocity
         }
     }
+    if (NRSTEPS > 0){
+        NRSTEPS--;
+    }
     if (NRSTEPS <= 0) {
         clearInterval(intervalID); // Stop animation when NRSTEPS reaches zero
     }
