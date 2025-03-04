@@ -1,5 +1,6 @@
-let NRSTEPS = NRSTEPS_MAX;
-let points = [];
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+const button = document.getElementById("generateNewPoints");
 
 function generateNewPoints(){
     for(i = 0; i < NRPTS; i++){

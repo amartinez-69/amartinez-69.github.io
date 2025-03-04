@@ -12,11 +12,10 @@
 </head>
 <body>
     <script>
-        const canvas = document.getElementById('myCanvas');
-        const ctx = canvas.getContext('2d');
-        const button = document.getElementById("generateNewPoints");
         const NRPTS = 7; 
         const NRSTEPS_MAX = 100;
+        let NRSTEPS = NRSTEPS_MAX;
+        let points = [];
     </script>
     <h1>Level 6</h1>
     <button id="generateNewPoints">Click Here</button> 
