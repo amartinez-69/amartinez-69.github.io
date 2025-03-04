@@ -5,8 +5,6 @@ const animateBtn = document.getElementById("animate");
 const resetBtn = document.getElementById("reset");
 const showTraceCheckbox = document.getElementById('showTrace');
 
-var trail = [];
-
 function generateNewPoints(){
     for(i = 0; i < NRPTS; i++){
         let x = Math.random() * (290-1) + 1
@@ -40,7 +38,7 @@ function drawVector(point) {
     ctx.stroke();
     vectors.push({x: point.vector.x, y: point.vector.y})
 }
-
+/*
 function drawTrace(point) {
     if (showTraceCheckbox.checked) {
         ctx.beginPath();
@@ -54,10 +52,11 @@ function drawTrace(point) {
         ctx.lineWidth = 1;
         ctx.stroke();
     }
-}
+} */
 
 function updatePoints() {
     for(i = 0; i < points.length; i++){
+        var trail = [];
         // Scale the vector by the speed factor
         points[i].x += points[i].vector.x * 0.5;
         points[i].y += points[i].vector.y * 0.5;
@@ -69,6 +68,18 @@ function updatePoints() {
 
         if (points[i].y <= 0 || points[i].y >= canvas.height) {
             points[i].vector.y = -points[i].vector.y; // Reverse y velocity
+        }
+        if (showTraceCheckbox.checked) {
+            ctx.beginPath();
+            ctx.moveTo(point[i].x, point[i].y);
+            // Draw lines for the trail (previous positions)
+            for (let i = trail.length - 1; i >= 0; i--) {
+                const trailPoint = trail[i];
+                ctx.lineTo(trailPoint.x, trailPoint.y);
+            }
+            ctx.strokeStyle = point[i].color;  // Semi-transparent black for trace
+            ctx.lineWidth = 1;
+            ctx.stroke();
         }
     }
     
