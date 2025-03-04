@@ -76,7 +76,12 @@ document.getElementById('numPoints').addEventListener('input', (e) => {
     NRPTS = parseInt(e.target.value, 10);
     button.addEventListener('click', () => {
         points = generateNewPoints();
+        let originalPoints = points;
         drawScene();
+        resetBtn.addEventListener('click', () =>{
+            points = originalPoints;
+            drawScene();
+        })
     });
     animateBtn.addEventListener('click', () => {
         //points = generateNewPoints();
@@ -84,9 +89,6 @@ document.getElementById('numPoints').addEventListener('input', (e) => {
         drawScene();
         animate();
     });
-    resetBtn.addEventListener('click', () =>{
-        drawScene();
-    })
 
 });
 
