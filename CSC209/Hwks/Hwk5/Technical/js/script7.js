@@ -1,7 +1,6 @@
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 const button = document.getElementById("generateNewPoints");
-const NRPTS = parseInt(document.getElementById("numPoints").value);
 
 function generateNewPoints(){
     for(i = 0; i < NRPTS; i++){
@@ -76,5 +75,10 @@ button.addEventListener('click', () => {
     NRSTEPS = NRSTEPS_MAX;
     drawScene();
     animate();
+});
+
+document.getElementById('numPoints').addEventListener('input', (e) => {
+    NRPTS = parseInt(e.target.value, 10);
+    generateRandomPoints();
 });
  // Initial draw
