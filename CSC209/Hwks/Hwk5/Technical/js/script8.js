@@ -9,6 +9,8 @@ function generateNewPoints(){
         points[i] = { 
             x: Math.random() * (290-1) + 1, 
             y: Math.random() * (290-1) + 1, 
+            originalX: x,
+            originalY: y,
             radius: 10, color: `hsl(${Math.random() * 360}, 100%, 50%)`, 
             vector: { x: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15, y: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15 } }
     }
@@ -72,9 +74,14 @@ function drawScene() {
     }
 }
 
+function reset() {
+    for(i = 0; i < points.length; i++){
+        points[i].x = points[i].originalX;
+        points[i].y = points[i].originalY;
+    }
+}
 button.addEventListener('click', () => {
     points = generateNewPoints();
-    let originalPoints = points;
     drawScene();
 });
 
@@ -89,5 +96,10 @@ animateBtn.addEventListener('click', () => {
     drawScene();
     animate();
 });
+
+resetBtn.addEventListener('click', () => {
+    reset();
+    drawScene();
+})
 
  // Initial draw
