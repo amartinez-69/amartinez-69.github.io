@@ -6,11 +6,13 @@ const resetBtn = document.getElementById("reset");
 
 function generateNewPoints(){
     for(i = 0; i < NRPTS; i++){
+        let x = Math.random() * (290-1) + 1
+        let y = Math.random() * (290-1) + 1
         points[i] = { 
-            x: Math.random() * (290-1) + 1, 
-            y: Math.random() * (290-1) + 1, 
-            originalX: points[i].x,
-            originalY: points[i].y,
+            x: x, 
+            y: y, 
+            originalX: x,
+            originalY: y,
             radius: 10, color: `hsl(${Math.random() * 360}, 100%, 50%)`, 
             vector: { x: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15, y: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15 } }
     }
