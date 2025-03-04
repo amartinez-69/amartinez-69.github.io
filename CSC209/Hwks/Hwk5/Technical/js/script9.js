@@ -3,6 +3,7 @@ const ctx = canvas.getContext('2d');
 const button = document.getElementById("generateNewPoints");
 const animateBtn = document.getElementById("animate");
 const resetBtn = document.getElementById("reset");
+const showTraceCheckbox = document.getElementById('showTrace');
 
 function generateNewPoints(){
     for(i = 0; i < NRPTS; i++){
@@ -25,6 +26,13 @@ function drawPoint(point) {
     ctx.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
     ctx.strokeStyle = point.color;
     ctx.stroke();  
+
+    if (showTraceCheckbox.checked) {
+        ctx.beginPath();
+        ctx.arc(point.originalX, point.originalY, point.radius, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(0, 0, 0, 0.5)`; // Semi-transparent black for trace
+        ctx.stroke();
+    }
 }
 
 // Draw the vector
@@ -103,4 +111,4 @@ resetBtn.addEventListener('click', () => {
     clearInterval(intervalID);
     reset();
     drawScene();
-})
+});
