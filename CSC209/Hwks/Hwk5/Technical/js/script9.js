@@ -51,10 +51,11 @@ function updatePoints() {
             points[i].vector.y = -points[i].vector.y; // Reverse y velocity
         }
         if (showTraceCheckbox.checked) {
-            ctx.beginPath();
+            drawPoint(point[i]);
+            /*ctx.beginPath();
             ctx.arc(points[i].x, points[i].y, points.radius, 0, Math.PI * 2);
             ctx.strokeStyle = points[i].color; // Semi-transparent black for trace
-            ctx.stroke();
+            ctx.stroke();*/
         }
     }
     if (NRSTEPS > 0){
