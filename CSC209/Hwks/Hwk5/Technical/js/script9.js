@@ -40,21 +40,17 @@ function drawVector(point) {
     ctx.stroke();
     vectors.push({x: point.vector.x, y: point.vector.y})
 }
-/*
+
 function drawTrace(point) {
-    if (showTraceCheckbox.checked) {
-        ctx.beginPath();
-        ctx.moveTo(point.x, point.y);
-        // Draw lines for the trail (previous positions)
-        for (let i = trail.length - 1; i >= 0; i--) {
-            const trailPoint = trail[i];
-            ctx.lineTo(trailPoint.x, trailPoint.y);
-        }
-        ctx.strokeStyle = point.color;  // Semi-transparent black for trace
-        ctx.lineWidth = 1;
-        ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(point.trail[0].x, point.trail[0].y); // Start from the first point in the trail
+    for (let j = 1; j < point.trail.length; j++) {
+        ctx.lineTo(point.trail[j].x, point.trail[j].y); // Draw line to each subsequent trail point
     }
-} */
+    ctx.strokeStyle = point.color;  // Set the color of the trail
+    ctx.lineWidth = 2;  // Set the line width for the trail
+    ctx.stroke();
+}
 
 function updatePoints() {
     for(i = 0; i < points.length; i++){
@@ -76,15 +72,7 @@ function updatePoints() {
             points[i].vector.y = -points[i].vector.y; // Reverse y velocity
         }
         if (showTraceCheckbox.checked) {
-            ctx.beginPath();
-            ctx.moveTo(points[i].trail[0].x, points[i].trail[0].y);
-            for (j = 1; j < points[i].trail.length; j++) {
-                ctx.lineTo(points[i].trail[j].x, points[i].trail[j].y);
-            }
-            ctx.strokeStyle = points[i].color;
-            ctx.lineWidth = 2;
-            ctx.stroke();
-            console.log(points[i].trail);
+            drawTrace(points[i]);
         }
     }
     
