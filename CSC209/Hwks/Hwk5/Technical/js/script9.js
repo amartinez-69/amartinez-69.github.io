@@ -14,9 +14,10 @@ function generateNewPoints(){
             y: y, 
             originalX: x,
             originalY: y,
-            radius: 10, color: `hsl(${Math.random() * 360}, 100%, 50%)`, 
+            radius: 10, 
+            color: `hsl(${Math.random() * 360}, 100%, 50%)`, 
             vector: { x: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15, y: Math.ceil((Math.random() - 0.5) * 2) < 1 ? -15 : 15 },
-            trail: []
+            //trail: []
          }
     }
     return(points);
@@ -57,7 +58,10 @@ function updatePoints() {
         // Scale the vector by the speed factor
         points[i].x += points[i].vector.x * 0.5;
         points[i].y += points[i].vector.y * 0.5;
-        points[i].trail.push({ x: points[i].x, y: points[i].y });
+        if(showTraceCheckbox.checked){
+            drawPoint(points[i]);
+        }
+        //points[i].trail.push({ x: points[i].x, y: points[i].y });
 
         // Keep the trail length within limits
         if (points[i].trail.length > 100) {
@@ -71,9 +75,11 @@ function updatePoints() {
         if (points[i].y <= 0 || points[i].y >= canvas.height) {
             points[i].vector.y = -points[i].vector.y; // Reverse y velocity
         }
-        if (showTraceCheckbox.checked) {
-            drawTrace(points[i]);
-        }
+        /*if (showTraceCheckbox.checked) {
+            for (let j = 1; j < points[i].trail.length; j++) {
+                ctx.lineTo(point.trail[j].x, point.trail[j].y); // Draw line to each subsequent trail point
+            }
+        }*/
     }
     
     if (NRSTEPS > 0){
