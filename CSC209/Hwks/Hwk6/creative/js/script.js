@@ -104,7 +104,7 @@ let NRSTEPS = 0;
         }
 
         animate(){
-            intervalId = setId(() => {
+            intervalId = setInterval(() => {
                 this.updateGrid();
                 this.drawGrid()
             }, 80);
