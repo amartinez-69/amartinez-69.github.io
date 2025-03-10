@@ -46,9 +46,9 @@
             for(let row = 0; row < this.rows; row++){
                 for(let col = 0; col < this.cols; col++){
                     this.ctx.fillStyle = this.grid[row][col] ? "black" : "white";
-                    this.ctx.fillRect(col * this.cellSize, row * this.cellSize, this.cellSize, this.cellSize);
+                    this.ctx.fillRect(col * this.cell, row * this.cell, this.cell, this.cell);
                     this.ctx.strokeStyle = "gray";
-                    this.ctx.strokeRect(col * this.cellSize, row * this.cellSize, this.cellSize, this.cellSize);
+                    this.ctx.strokeRect(col * this.cell, row * this.cell, this.cell, this.cell);
                 }
             }
         }
