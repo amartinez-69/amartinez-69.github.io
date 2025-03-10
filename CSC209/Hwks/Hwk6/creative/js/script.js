@@ -1,6 +1,6 @@
+let NRSTEPS = 0;
 (function() {
     class GameGrid {
-
         constructor(canvasId, rows, cols, cell) {
             this.canvasId = canvasId;
             this.rows = rows;
