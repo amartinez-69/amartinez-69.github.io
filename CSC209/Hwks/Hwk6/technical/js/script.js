@@ -11,7 +11,7 @@
         init() {
 
             this.canvas - document.getElementById(this.canvasId);
-            this.ctx = this.canvas.getContext('2d');
+            this.ctx = this.canvas.getContext("2d");
             this.canvas.width = this.cols * this.cell;
             this.canvas.height = this.rows * this.cell; 
             this.grid = Array.from({length: this.rows}, () => Array(this.cols).fill(0)); 
