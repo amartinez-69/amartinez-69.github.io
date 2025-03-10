@@ -10,7 +10,7 @@
 
         init() {
 
-            this.canvas - document.getElementById(this.canvasId);
+            this.canvas = document.getElementById(this.canvasId);
             this.ctx = this.canvas.getContext("2d");
             this.canvas.width = this.cols * this.cell;
             this.canvas.height = this.rows * this.cell; 
