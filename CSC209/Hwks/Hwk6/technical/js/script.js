@@ -1,5 +1,5 @@
 (function() {
-    class gameGrid {
+    class GameGrid {
 
         constructor(canvasId, rows, cols, cell) {
             this.canvasId = canvasId;
@@ -93,6 +93,6 @@
 
     }
 
-    const gameGrid = new gameGrid("gameCanvas", 50, 50, 20);
+    const gameGrid = new GameGrid("gameCanvas", 50, 50, 20);
     gameGrid.init(); 
 })();
