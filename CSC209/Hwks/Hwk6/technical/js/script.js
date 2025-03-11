@@ -7,7 +7,7 @@ class GameGrid {
             this.cell = cell;
         }
 
-        init() {
+        gameinit() {
             //assigns all parameters for the grid
             this.canvas = document.getElementById(this.canvasId);
             this.ctx = this.canvas.getContext("2d");
@@ -94,4 +94,4 @@ class GameGrid {
     }
 
     const gameGrid = new GameGrid("canvas", 50, 50, 20);
-    gameGrid.init(); 
+    gameGrid.gameinit(); 
