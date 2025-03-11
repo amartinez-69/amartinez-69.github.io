@@ -113,6 +113,6 @@
 
     }
 
-    const gameGrid = new GameGrid("gameCanvas", 50, 50, 20);
+    const gameGrid = new GameGrid("canvas", 50, 50, 20);
     gameGrid.init(); 
 })();

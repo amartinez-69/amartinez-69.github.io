@@ -58,7 +58,7 @@
             let newGrid = Array.from({ length: this.rows }, () => Array(this.cols).fill(0));
             for(let row = 0; row < this.rows; row++){
                 for(let col = 0; col < this.cols; col++){
-                    let numNeighbors = this.liveNeighbors(row, col); //liveNeighbors checks how many live neighbors (colored cells) the cell has. if it has more than 2 it dies
+                    let numNeighbors = this.liveNeighbors(row, col); //liveNeighbors counts how many live neighbors (colored cells) the cell has. if it has more than 2 it dies
                     if(this.grid[row][col] === 1){
                         newGrid[row][col] = (numNeighbors === 2 || numNeighbors === 3) ? 1 : 0;
                     } else {
@@ -94,6 +94,6 @@
 
     }
 
-    const gameGrid = new GameGrid("gameCanvas", 50, 50, 20);
+    const gameGrid = new GameGrid("canvas", 50, 50, 20);
     gameGrid.init(); 
 })();
