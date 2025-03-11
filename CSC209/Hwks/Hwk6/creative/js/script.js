@@ -1,8 +1,8 @@
 //script is mostly the same from technical but has additional start button. which uses the animate function I created for hwk5 but altered for this hwk. 
 
     class GameGrid {
-        constructor(canvasId, rows, cols, cell) {
-            this.canvasId = canvasId;
+        constructor(canvas, rows, cols, cell) {
+            this.canvas = canvas;
             this.rows = rows;
             this.cols = cols; 
             this.cell = cell;
@@ -10,7 +10,7 @@
 
         gameinit() {
 
-            this.canvas = document.getElementById(this.canvasId);
+            this.canvas = document.getElementById(this.canvas);
             this.ctx = this.canvas.getContext("2d");
             this.canvas.width = this.cols * this.cell;
             this.canvas.height = this.rows * this.cell; 
