@@ -1,4 +1,3 @@
-let NRSTEPS = 0;
 (function() {
     class GameGrid {
         constructor(canvasId, rows, cols, cell) {
