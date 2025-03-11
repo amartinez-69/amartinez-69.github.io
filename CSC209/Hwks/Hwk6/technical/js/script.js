@@ -1,7 +1,7 @@
 class GameGrid {
         //contructor for GameGrid class
-        constructor(canvasId, rows, cols, cell) {
-            this.canvasId = canvasId;
+        constructor(canvas, rows, cols, cell) {
+            this.canvas = canvas;
             this.rows = rows;
             this.cols = cols; 
             this.cell = cell;
@@ -9,7 +9,7 @@ class GameGrid {
 
         gameinit() {
             //assigns all parameters for the grid
-            this.canvas = document.getElementById(this.canvasId);
+            this.canvas = document.getElementById(this.canvas);
             this.ctx = this.canvas.getContext("2d");
             this.canvas.width = this.cols * this.cell;
             this.canvas.height = this.rows * this.cell; 
