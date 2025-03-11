@@ -15,7 +15,7 @@
             this.ctx = this.canvas.getContext("2d");
             this.canvas.width = this.cols * this.cell;
             this.canvas.height = this.rows * this.cell; 
-            this.grid = Array.from({length: this.rows}, () => Array(this.cols).fill(0)); 
+            this.grid = Array.from({length: this.rows}, () => Array(this.cols).fill(0)); //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
 
             this.drawGrid();
             this.setPattern();
