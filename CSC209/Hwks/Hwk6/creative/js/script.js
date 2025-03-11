@@ -45,7 +45,7 @@
         }
 
         drawGrid(){
-            this.ctx.clearRect(0, 0, this.canvasId.width, this.canvas.height);
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
             for(let row = 0; row < this.rows; row++){
                 for(let col = 0; col < this.cols; col++){
