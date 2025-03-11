@@ -51,9 +51,9 @@
 
             for(let row = 0; row < this.rows; row++){
                 for(let col = 0; col < this.cols; col++){
-                    this.ctx.fillStyle = this.grid[row][col] ? "black" : "white";
+                    this.ctx.fillStyle = this.grid[row][col] ? "pink" : "purple";
                     this.ctx.fillRect(col * this.cell, row * this.cell, this.cell, this.cell);
-                    this.ctx.strokeStyle = "gray";
+                    this.ctx.strokeStyle = "pink";
                     this.ctx.strokeRect(col * this.cell, row * this.cell, this.cell, this.cell);
                 }
             }
