@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let NRPTS = 0;
+        const NRSTEPS_MAX = 200;
+        let NRSTEPS = NRSTEPS_MAX;
+        let points = [];
+    </script>
+    <h1>Creative: Adjust the Temperature!</h1>
+    <label for="temp">Choose a Temperature:</label>
+    <select name="temp" id="temp">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+    </select>
+    <p>How many points?</p>
+    <input id="numPoints"></input>
+    <button id="generateNewPoints">Generate Points</button> 
+    <br> </br>
+    <button id="animate">Animate</button>
+    <br> </br>
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+    <br> </br>
+    <button id="reset">Reset</button>
+    <script src="js/creative.js"></script>
+</body>
+</html>

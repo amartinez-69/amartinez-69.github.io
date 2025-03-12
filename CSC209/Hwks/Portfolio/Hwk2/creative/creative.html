@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Creative for Homework 2</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link id="pagestyle" rel="stylesheet" href="green.css">
+</head>
+
+<body>
+<h1 class="header">Creative (2 hours)</h1>
+<section>
+<nav>
+    <ul>
+        <li><a href="../hwk2StartPage.html">Start Page</a></li>
+        <li><a href="../tutorials/tutorials.html">Tutorials</a></li>
+        <li><a href="../technical/technical.html">Technical</a></li>
+        <li><a href="https://youtu.be/KDorKy-13ak?si=o5B_OnAnYyzmAjS-">SB2025 Halftime Show</a></li>
+    </ul>
+</nav>
+
+<article>
+    <img src="files/pusheen_artspotlight_header.jpg" alt="cats" style="width: 420px; height: 140px;" class="center">
+
+    <h2>I Don't Know, About Me?</h2>
+    <h3>Some Information</h3>
+    <p><span id="hide"></span><span id="more">Once again, I'm not the most creative so I decided to use the same format from technical in my creative part. I've decided to make it varying shades of green to match the Pusheen header (by the way, all images on this webpage were taken from the internet). I also included a little about me section to practice some other features I learned from the tutorials, such as an animated accordion-style feature with a few fun facts about me, like my favorite artists, my plans for the summer, and my hobbies!</accordion-style>. </span></p>
+    <button onclick="myFunction()" id="myBtn" class="button">Read Me</button>
+    <script>
+        function myFunction() {
+            var hideText = document.getElementById("hide")
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (hideText.style.display === "none") {
+                btnText.innerHTML = "Read Me";
+                hideText.style.display = "inline";
+                moreText.style.display = "none";
+            } else {
+                hideText.style.display = "none";
+                btnText.innerHTML = "Hide";
+                moreText.style.display = "inline";
+            } 
+            
+        }
+    </script>
+    <p> </p>
+    <button class="button"; onClick="swapStyleSheet('darkmode.css')">Black&White</button>
+    <p> </p>
+    <button class="button"; onClick="swapStyleSheet('green.css')">Revert</button>
+    <script type="text/javascript">
+        function swapStyleSheet(sheet){
+             document.getElementById('pagestyle').setAttribute('href',sheet);
+        }
+        </script>
+        <p> </p>
+    <h2>Courses for the Spring Semester! (As a Computer Science and Quantitative Economics Double Majoring Junior)</h2>
+    <table border="5px">
+        <tr style="height:20px"> 
+            <th>Course</th>
+            <th>Code</th>
+            <th>Meeting Pattern</th>
+            <th>Room and Building</th>
+        </tr>
+        <tr style="height:70px">
+            <th>Web Programming</th>
+            <th>CSC209</th>
+            <th>Wednesday, 1:20-4:00pm</th>
+            <th>Sabin-Reed 220</th>
+        </tr>
+        <tr style="height:70px"> 
+            <th>Intermediate Macroeconomics</th>
+            <th>ECO253</th>
+            <th>Monday, Wednesday, and Friday, 10:50am-12:05pm</th>
+            <th>Hillyer 103</th>
+        </tr>
+        <tr tyle="height:70px">
+            <th>Behavioral Economics</th>
+            <th>ECO254</th>
+            <th>Tuesday and Thursday, 9:25-10:40am</th>
+            <th>Seelye 101</th>
+        </tr>
+        <tr style="height:70px">
+            <th>Intro Electronics and Arduino</th>
+            <th>CSC233</th>
+            <th>Tuesday and Thursday, 2:45-4:00pm</th>
+            <th>Bass 204</th>
+        </tr>
+    </table>
+    <p> </p>
+
+    <h2>More About Me!</h2>
+    <button class="accordion">My Hobbies</button>
+    <div class="panel">
+      <p>Lately I haven’t had much time to do my hobbies because of school and work and the like. But usually I’m a big reader, like a BIG reader. I think one year I managed to read 50 books in total, but that was definitely a couple years ago. Last year I didn’t even make it to 20 books, but I digress. I also love to bake! On my public Instagram page, I have an entire highlight dedicated to my baked goods (and my dog is in most of the pictures, haha). Unfortunately, because smith doesn’t really have too many usable kitchens (especially in Duckett house, which is my house) so I’m never able to bake on campus, but when I go back home I bake a ton! </p>
+    </div>
+    
+    <button class="accordion">My Favorite Artists at the Moment!</button>
+    <div class="panel">
+      <p>I’ll admit, my taste in music isn’t everyone’s cup of tea, but lately my music taste has definitely gotten better (trust me). I used to listen to a lot of Taylor Swift, like she was my most listened to artist for a solid three years. But lately I’ve been listening to a lot of Chappell Roan (I LOVE Chappell Roan), Kendrick Lamar (I have the Super Bowl halftime show linked in the navigation bar), Sabrina Carpenter (nothing new there), and 6arelyhuman (pronounced Barely Human)! I have some songs from different artists on rotation as well, such as Headlock by Imogen Heap, VVV (HES BACK) by mikeeysmind, and Love Potions by BJ Lips. </p>
+    </div>
+    
+    <button class="accordion">Summer Plans?</button>
+    <div class="panel">
+      <p>Well, I hope to go back to the Dominican Republic in May. That was the original plan, but there’s a good chance that the family I’m supposed to visit is actually coming to the U.S.  but it’s okay, I’ll take my own little vacation at some point. Otherwise, I have an internship! I’ll be Apple Bank’s IT intern for the second summer in a row. I’ll be in New York City (although, I already live there so the novelty of it has worn off) and I’ll be working there from June 2nd to August 7th (I think…). I had a lot of fun last year and the bank became my safe haven, so I’m really happy to be coming back! I get to see my big sister (not really my big sister, but basically my big sister) again! She also works in the IT department. Other things happening this summer are: my 21st birthday (yay), maybe some travel, lots of time with friends!!! </p>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+          });
+        }
+        </script>
+
+    <h2>Thank you for listening to my incessant yapping!</h2>
+    <img src="files/tumblr_ms20vpk95w1qhy6c9o1_500.webp" alt="cats" style="width: 200px; height: 200px;" class="center">
+    <p>Again, all images are taken from the internet.</p>
+</article>
+</section>
+
+</body>
+</html>
