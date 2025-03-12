@@ -22,7 +22,7 @@
             this.setPattern();
             //next button 
             document.getElementById('next').addEventListener("click", () => {
-                gameGrid.updateGrid(); 
+                this.updateGrid(); 
             });
 
 
