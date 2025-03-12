@@ -101,9 +101,9 @@
         rows = parseInt(e.target.value, 10)
     })
 
-    document.getElementById('generate').addEventListener("click", () => {
-        gameGrid = new GameGrid("canvas", rows, cols, 20); 
+    //document.getElementById('generate').addEventListener("click", () => {
+        //let gameGrid = new GameGrid("canvas", rows, cols, 20); 
         //gameGrid.init(); 
-    })
-    //const gameGrid = new GameGrid("canvas", rows, cols, 20);
+    //})
+    const gameGrid = new GameGrid("canvas", rows, cols, 20);
     gameGrid.init(); 
