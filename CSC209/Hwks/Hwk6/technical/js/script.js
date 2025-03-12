@@ -93,5 +93,12 @@
 
     }
 
-    const gameGrid = new GameGrid("canvas", 50, 50, 20);
+    document.getElementById('cols').addEventListener('input', (e) => {
+        cols = parseInt(e.target.value, 10);
+    });
+
+    document.getElementById('rows').addEventListener('input', (e) => {
+        rows = parseInt(e.target.value, 10)
+    })
+    const gameGrid = new GameGrid("canvas", rows, cols, 20);
     gameGrid.init(); 
