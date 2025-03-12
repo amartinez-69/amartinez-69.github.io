@@ -5,6 +5,7 @@ const animateBtn = document.getElementById("animate");
 const resetBtn = document.getElementById("reset");
 
 function generateNewPoints(){
+    points.length = 0;
     for(i = 0; i < NRPTS; i++){
         let x = Math.random() * (290-1) + 1
         let y = Math.random() * (290-1) + 1
