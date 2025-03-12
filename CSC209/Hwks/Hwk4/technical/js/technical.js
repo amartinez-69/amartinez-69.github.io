@@ -1,5 +1,5 @@
 function startMovement(){
-    let squares = document.querySelectorAll(".squares");
+    let squares = document.querySelectorAll(".square");
     console.log(squares); //this keeps returning an empty list, I'm not sure how to make this work. Maybe mkae a function that will create the squares? 
 
     squares.forEach(square => {

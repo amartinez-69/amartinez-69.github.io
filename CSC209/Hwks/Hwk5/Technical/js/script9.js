@@ -5,6 +5,8 @@ const animateBtn = document.getElementById("animate");
 const resetBtn = document.getElementById("reset");
 const showTraceCheckbox = document.getElementById('showTrace');
 
+//I still have no idea how to get the trace to work
+
 function generateNewPoints(){
     for(i = 0; i < NRPTS; i++){
         let x = Math.random() * (290-1) + 1

@@ -104,7 +104,7 @@
         }
 
         animate(){
-            intervalId = setInterval(() => {
+            intervalId = setInterval(() => { //I can't get it to stop throwing the error
                 this.updateGrid();
                 this.drawGrid()
             }, 80);
