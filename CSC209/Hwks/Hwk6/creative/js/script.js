@@ -1,6 +1,5 @@
 //script is mostly the same from technical but has additional start button. which uses the animate function I created for hwk5 but altered for this hwk. 
 
-(function() {
     class GameGrid {
         constructor(canvasId, rows, cols, cell) {
             this.canvasId = canvasId;
@@ -115,4 +114,3 @@
 
     const gameGrid = new GameGrid("canvas", 50, 50, 20);
     gameGrid.init(); 
-})();

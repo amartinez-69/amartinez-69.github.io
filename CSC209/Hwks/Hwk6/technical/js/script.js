@@ -1,4 +1,4 @@
-class GameGrid {
+    class GameGrid {
         //contructor for GameGrid class
         constructor(canvasId, rows, cols, cell) {
             this.canvasId = canvasId;
