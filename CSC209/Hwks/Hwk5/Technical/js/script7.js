@@ -77,7 +77,7 @@ function drawScene() {
     animate();
 });*/
 
-document.getElementById('numPoints').addEventListener('input', (e) => {
+document.getElementById('numPoints').addEventListener('change', (e) => {
     NRPTS = parseInt(e.target.value, 10);
     points = generateNewPoints();
 });
