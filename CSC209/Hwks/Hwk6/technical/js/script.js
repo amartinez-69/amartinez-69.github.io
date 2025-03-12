@@ -100,5 +100,10 @@
     document.getElementById('rows').addEventListener('input', (e) => {
         rows = parseInt(e.target.value, 10)
     })
-    const gameGrid = new GameGrid("canvas", rows, cols, 20);
-    gameGrid.init(); 
+
+    document.getElementById('generate').addEventListener("click", () => {
+        const gameGrid = new GameGrid("canvas", rows, cols, 20);
+        gameGrid.init(); 
+    })
+    //const gameGrid = new GameGrid("canvas", rows, cols, 20);
+    //gameGrid.init(); 
