@@ -11,6 +11,13 @@
             //assigns all parameters for the grid
             this.canvas = document.getElementById(this.canvasId);
             this.ctx = this.canvas.getContext("2d");
+            document.getElementById('cols').addEventListener('input', (e) => {
+                cols = parseInt(e.target.value, 10);
+            });
+        
+            document.getElementById('rows').addEventListener('input', (e) => {
+                rows = parseInt(e.target.value, 10)
+            })
             this.canvas.width = this.cols * this.cell;
             this.canvas.height = this.rows * this.cell; 
             this.grid = Array.from({length: this.rows}, () => Array(this.cols).fill(0));  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
@@ -18,6 +25,8 @@
             this.drawGrid();
             this.setPattern();
             //next button 
+
+            
             document.getElementById('next').addEventListener("click", () => {
                 gameGrid.updateGrid(); 
             });
@@ -93,13 +102,13 @@
 
     }
 
-    document.getElementById('cols').addEventListener('input', (e) => {
-        cols = parseInt(e.target.value, 10);
-    });
+    //document.getElementById('cols').addEventListener('input', (e) => {
+        //cols = parseInt(e.target.value, 10);
+    //});
 
-    document.getElementById('rows').addEventListener('input', (e) => {
-        rows = parseInt(e.target.value, 10)
-    })
+    //document.getElementById('rows').addEventListener('input', (e) => {
+        //rows = parseInt(e.target.value, 10)
+    //})
 
     //document.getElementById('generate').addEventListener("click", () => {
         //let gameGrid = new GameGrid("canvas", rows, cols, 20); 
