@@ -103,6 +103,7 @@
 
     document.getElementById('generate').addEventListener("click", () => {
         const gameGrid = new GameGrid("canvas", rows, cols, 20); 
+        gameGrid.init(); 
     })
     //const gameGrid = new GameGrid("canvas", rows, cols, 20);
-    gameGrid.init(); 
+    //gameGrid.init(); 
