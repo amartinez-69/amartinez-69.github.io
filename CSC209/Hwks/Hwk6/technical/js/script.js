@@ -1,5 +1,3 @@
-    let rows = 50;
-    let cols = 50;
 
     class GameGrid {
         //contructor for GameGrid class

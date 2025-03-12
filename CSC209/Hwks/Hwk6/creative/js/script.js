@@ -20,12 +20,12 @@
             this.setPattern();
 
             document.getElementById('next').addEventListener("click", () => {
-                gameGrid.updateGrid(); 
+                this.updateGrid(); 
             });
 
             document.getElementById('start').addEventListener("click", () => {
                 NRSTEPS = 100;
-                gameGrid.animate(); 
+                this.animate(); 
             })
 
 
@@ -112,5 +112,15 @@
 
     }
 
-    const gameGrid = new GameGrid("canvas", 50, 50, 20);
-    gameGrid.init(); 
+    document.getElementById('cols').addEventListener('input', (e) => {
+        cols = parseInt(e.target.value, 10);
+    });
+
+    document.getElementById('rows').addEventListener('input', (e) => {
+        rows = parseInt(e.target.value, 10)
+    })
+
+    document.getElementById('generate').addEventListener("click", () => {
+        const gameGrid = new GameGrid("canvas", rows, cols, 20); 
+        gameGrid.init(); 
+    })
