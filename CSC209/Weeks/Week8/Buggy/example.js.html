@@ -25,11 +25,11 @@
 	
 <script>
 	
-	for (let i=0; i<= NRWEEKS; i++){
-		var crtWeekTitle = WEEK.replace("NRWEEK","" + i+1);
-		var crtWeekDate = DATE.replace("DATE",LISTDATES[i]);
-		var crtWeekTopic = TOPIC.replace("TOPIC",LISTTOPICS[i]);
-		var crtWeekDescr = DESCRIPTION.replace("DESCR",LISTDESCRIPTIONS[i]);
+	for (let i=1; i<= NRWEEKS; i++){
+		var crtWeekTitle = WEEK.replace("NRWEEK","" + i);
+		var crtWeekDate = DATE.replace("DATE",LISTDATES[i-1]);
+		var crtWeekTopic = TOPIC.replace("TOPIC",LISTTOPICS[i-1]);
+		var crtWeekDescr = DESCRIPTION.replace("DESCR",LISTDESCRIPTIONS[i-1]);
 		var mainBody = crtWeekTitle + crtWeekDate + crtWeekTopic + crtWeekDescr;
 		// alert("crtWeekTitle="+crtWeekTitle);
 		document.getElementsByTagName("body")[0].innerHTML += mainBody;
