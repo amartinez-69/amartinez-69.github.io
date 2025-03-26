@@ -10,7 +10,7 @@ $LISTTOPICS= array("Installation","Html","Css","Javascript 1","","","","","","",
 
 // $TOPIC ="<h3>TOPIC</h3";
 
-$LISTDESCRIPTIONS=array("We install software","We make our first Html","We style pages with Css","Get started on Javascript ","","","","","","","","","");
+$LISTDESCRIPTIONS=array("We install software","We make our first Html","We style pages with Css","Get started on Javascript ","","","","");
 
 // $TOPIC ="<h3>DESCRIPTION</h3";
 
