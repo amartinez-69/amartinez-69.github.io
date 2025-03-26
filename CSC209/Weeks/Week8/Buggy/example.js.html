@@ -25,8 +25,8 @@
 	
 <script>
 	
-	for (let i=1; i<= NRWEEKS; i++){
-		var crtWeekTitle = WEEK.replace("NRWEEK","" + i);
+	for (let i=0; i<= NRWEEKS; i++){
+		var crtWeekTitle = WEEK.replace("NRWEEK","" + i+1);
 		var crtWeekDate = DATE.replace("DATE",LISTDATES[i]);
 		var crtWeekTopic = TOPIC.replace("TOPIC",LISTTOPICS[i]);
 		var crtWeekDescr = DESCRIPTION.replace("DESCR",LISTDESCRIPTIONS[i]);
