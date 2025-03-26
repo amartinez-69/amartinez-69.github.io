@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game of Life Technical</title>
+</head>
+<body>
+
+<h1>Game of Life</h1>
+<script>
+    let NRSTEPS = 0;
+    let rows = 50;
+    let cols = 50;
+    let intervalId;
+</script>
+<button id="next">Next</button>
+<button id="start">Start</button>
+<br></br>
+<p>Number of rows: </p>
+<input id="rows"></input>
+<p>Number of columns: </p>
+<input id="cols"></input>
+<br> </br>
+<button id="generate">Generate Grid</button>
+<br> </br>
+<canvas id="canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+<script src="../js/film.js"></script>
+</body>
+</html>

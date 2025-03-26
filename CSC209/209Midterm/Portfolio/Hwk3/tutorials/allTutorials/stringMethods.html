@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+<h2>The length Property</h2>
+
+<p>The length of the string is:</p>
+<p id="demo"></p>
+
+<script>
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo").innerHTML = text.length;
+</script>
+
+<h2>The charAt() Method</h2>
+
+<p>The charAt() method returns the character at a given position in a string:</p>
+
+<p id="demo2"></p>
+
+<script>
+var text2 = "HELLO WORLD";
+document.getElementById("demo2").innerHTML = text2.charAt(0);
+</script>
+
+<h2>The charCodeAt() Method</h2>
+
+<p>The charCodeAt() method returns the unicode of the character at a given position in a string:</p>
+
+<p id="demo3"></p>
+
+<script>
+let text3 = "HELLO WORLD";
+document.getElementById("demo3").innerHTML = text3.charCodeAt(0);
+</script>
+
+<h2>Bracket Notation</h2>
+
+<p>The bracked notation [] returns an indexed element from a string:</p>
+
+<p id="demo4"></p>
+
+<script>
+const name = "W3Schools";
+let letter = name[2];
+
+document.getElementById("demo4").innerHTML = letter;
+</script>
+
+<h2>The slice() Method</h2>
+
+<p>The sliced (extracted) part of the string is:</p>
+<p id="demo5"></p>
+
+<script>
+let text4 = "Apple, Banana, Kiwi";
+let part = text4.slice(7,13);
+document.getElementById("demo5").innerHTML = part; 
+</script>
+
+<p>The substr() method extract a part of a string and returns the extracted parts in a new string:</p>
+
+<p id="demo6"></p>
+
+<script>
+let str = "Apple, Banana, Kiwi";
+document.getElementById("demo6").innerHTML = str.substr(7);
+</script>
+
+<h2>The concat() Method</h2>
+
+<p>The concat() method joins two or more strings:</p>
+
+<p id="demo7"></p>
+
+<script>
+let text5 = "Hello";
+let text6 = "World!";
+let text7 = text1.concat(" ",text2);
+document.getElementById("demo7").innerHTML = text7;
+</script>
+
+</body>
+</html>

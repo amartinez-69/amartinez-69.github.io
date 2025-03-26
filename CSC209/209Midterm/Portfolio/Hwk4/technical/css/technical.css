@@ -1,0 +1,44 @@
+
+#myContainer {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: yellow;
+}
+
+.square {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+#square1 {
+    background-color: red;
+    top: 0px;
+    left: 0px;
+}
+
+#square2 {
+    background-color: blue;
+    top: 0px;
+    left: 350px;
+}
+
+#square3 {
+    background-color: green;
+    top: 350px;
+    left: 0px;
+}
+
+#square4 {
+    background-color: pink;
+    top: 350px;
+    left: 350px;
+}
+
+#square5 {
+    background-color: purple;
+    top: 175px;
+    left: 175px;
+}

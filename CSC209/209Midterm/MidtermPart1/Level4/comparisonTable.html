@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/level4.css">
+</head>
+<body>
+<!-- Upon reaching level 10, I realized that I've been using DOM functions to add a new row to the table. I came back and edited levels 3 to 8 so that I only used innerHTML for appending a new row. I left the original code from my first attempt in comments. This code is then used in Level 10. -->
+
+<h2>Comparison Table</h2>
+<p>The role of the link tag is to link a css file to an html file, typically a style sheet to format the html webpage. For example, the css file linked to this html file changes the color of each cross/check, sets up the table and each row, and changes the background golor for each alternating row.</p>
+
+<table id="table">
+  <tr>
+    <th style="width:50%">Name</th>
+    <th>Part 1</th>
+    <th>Part 2</th>
+  </tr>
+  <tr>
+    <td>Sample text</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+</table>
+
+<script>
+  function addRow(text, basic, pro){ 
+
+    //I added an id='table' to the table tag, and used getElementById to store it in a constant variable
+    const table = document.getElementById("table");
+
+    //declares variable that stores a string for the html code for the new row being added to the innerHTML of the table. Concatention is used to add each substring into a separate cell.
+    let row = "<tr> <td>" + text + "</td> <td> <i class=\"fa " + basic + "\"></i>" + "</td> <td> <i class=\"fa " + pro + "\"></i>" + "</td> </tr>";
+
+    //adds row to table using innerHTML. Believe it or not, it somehow took me an hour to work this out, because the row kept replacing the whole table instead of being added. 
+    table.innerHTML += row; 
+
+    /* ORIGINAL CODE FROM IN CLASS
+    let row = table.insertRow(-1);
+    let cell1 = row.insertCell(0); 
+    let cell2 = row.insertCell(1);
+    let cell3 = row.insertCell(2);
+    cell1.innerHTML = text;
+    cell2.innerHTML = basic;
+    cell3.innerHTML = pro; */
+  }
+
+  //calls function
+  addRow("Sample text", "fa-check", "fa-remove");
+</script>
+</body>
+</html>
