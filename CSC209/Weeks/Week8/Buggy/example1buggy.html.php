@@ -24,12 +24,14 @@ $LISTDESCRIPTIONS=array("We install software","We make our first Html","We style
 
 <h1><?php echo "NRWEEKS=".$NRWEEKS."<br>"; ?></h1>
 
+<h1>NRWEEKS= <?= $NRWEEKS ?><br></h1>
+
 <?php
 for ( $i=1; $i <= $NRWEEKS; $i++){
 	echo("<h1>Week $i<h1>");
-	echo("<h2>Date: $LISTDATES[$i]</h2>");
-	echo("<h2>Topic: $LISTTOPICS[$i]</h2>");
-	echo("<h2>Description: ".$LISTDESCRIPTIONS[$i]."</h2>");
+	echo("<h2>Date: ".$LISTDATES[$i-1]."</h2>");
+	echo("<h2>Topic: ".$LISTTOPICS[$i-1]."</h2>");
+	echo("<h2>Description: ".$LISTDESCRIPTIONS[$i-1]."</h2>");
 	}
 ?>
 	
