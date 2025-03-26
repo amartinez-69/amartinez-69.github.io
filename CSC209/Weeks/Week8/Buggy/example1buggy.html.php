@@ -1,5 +1,5 @@
 <?php
-$NRWEEKS = 6;
+$NRWEEKS = count($LISTDATES);
 // $WEEK = "<h1>Week NRWEEK</h1>";
 
 $LISTDATES = array("Feb 1","Feb 8","Feb 15","Feb 21","March 1","March 8","March 15","March 21","April 1","April 8","April 15","April 21");
