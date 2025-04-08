@@ -2,7 +2,7 @@
 session_start();
 
 // Get all the images in the folder
-$images = glob("../imagesPart2/*");
+$images = glob("../images2/*");
 $NRIMAGES = count($images);
 $captions = [];
 foreach ($images as $image) {
@@ -38,8 +38,8 @@ $slideIndex = $_SESSION['slideIndex'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slideshow</title>
-    <link id="pagestyle" rel="stylesheet" href="css/slideshow.css">
+    <title>Level 5 and 6</title>
+    <link id="pagestyle" rel="stylesheet" href="slideshow.css">
 </head>
 
 <body>
@@ -67,8 +67,8 @@ $slideIndex = $_SESSION['slideIndex'];
         </div>
 
         <!-- Navigation buttons -->
-        <a href="?action=prev">Previous</a>
-        <a href="?action=next">Next</a>
+        <a class="prev" href="?action=prev">❮</a>
+        <a class="next" href="?action=next">❯</a>
     </div>
 
     <br>

@@ -2,7 +2,7 @@
 <html>
 <head>
 <?php 
-    $images = glob("../imagesPart1/*");
+    $images = glob("../images1/*");
     $NRIMAGES = count($images); 
 ?>
 </head>

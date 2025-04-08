@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link id="pagestyle" rel="stylesheet" href="css/slideshow.css">
 <?php 
-    $images = glob("../imagesPart2/*");
+    $images = glob("../images2/*");
     $NRIMAGES = count($images);
     $captions = [];
     foreach($images as $image){

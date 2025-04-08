@@ -20,7 +20,7 @@ Select which image you want to display:
 </form> 
 
 <?php 
-    $images = glob("../imagesPart1/*");
+    $images = glob("../images1/*");
     $NRIMAGES = count($images); 
     for($i = 0; $i < $NRIMAGES; $i++){
         echo "<img id='Image" . ($i+1) . "' src=\"" . $images[$i] . "\" alt= \"Image" . ($i + 1) . "\" style=\"height: 200px; width: 300px; display: none;\">";
