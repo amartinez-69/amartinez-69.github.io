@@ -7,11 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Level 7</title>
     <link id="pagestyle" rel="stylesheet" href="slideshow.css">
-    
 </head>
 
 <body>
-
     <?php
         session_start();
 
@@ -42,12 +40,14 @@
         // Current slide index
         $slideIndex = $_SESSION['slideIndex'];
     ?>
-
+<div class="sidenav">
     <div class="folder-selector">
         <a href="?folder=images2" class="folder-button">Original</a>
         <a href="?folder=images1" class="folder-button">Cats</a>
         <a href="?folder=images3" class="folder-button">Coffee</a>
     </div>
+</div>
+    <div class="main">
     <div class="slideshow-container">
         <!-- Slides -->
         <?php 
@@ -75,7 +75,7 @@
         <a class="prev" href="?action=prev&folder=<?php echo $folder; ?>">❮</a>
         <a class="next" href="?action=next&folder=<?php echo $folder; ?>">❯</a>
     </div>
-
+</div>
     <br>
     
     

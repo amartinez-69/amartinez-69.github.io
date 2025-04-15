@@ -1,37 +1,4 @@
-<?php
-session_start();
 
-// Get all the images in the folder
-$images = glob("../images2/*");
-$NRIMAGES = count($images);
-$captions = [];
-foreach ($images as $image) {
-    $caption = basename($image);
-    array_push($captions, $caption);
-}
-
-// Initialize slideIndex to session or default to 1
-if (!isset($_SESSION['slideIndex'])) {
-    $_SESSION['slideIndex'] = 1;
-}
-
-// Get the current slide index, default to session value if not set in the URL
-if (isset($_GET['slide'])) {
-    $_SESSION['slideIndex'] = (int)$_GET['slide'];
-}
-
-// Handle next and previous logic
-if (isset($_GET['action'])) {
-    if ($_GET['action'] === 'next') {
-        $_SESSION['slideIndex'] = ($_SESSION['slideIndex'] % $NRIMAGES) + 1; // Go to next slide, loop back to 1
-    } elseif ($_GET['action'] === 'prev') {
-        $_SESSION['slideIndex'] = ($_SESSION['slideIndex'] - 2 + $NRIMAGES) % $NRIMAGES + 1; // Go to previous slide, loop back to last
-    }
-}
-
-// Current slide index
-$slideIndex = $_SESSION['slideIndex'];
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,6 +7,40 @@ $slideIndex = $_SESSION['slideIndex'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Level 5 and 6</title>
     <link id="pagestyle" rel="stylesheet" href="slideshow.css">
+    <?php
+        session_start();
+
+        // Get all the images in the folder
+        $images = glob("../images2/*");
+        $NRIMAGES = count($images);
+        $captions = [];
+        foreach ($images as $image) {
+            $caption = basename($image);
+            array_push($captions, $caption);
+        }
+
+        // Initialize slideIndex to session or default to 1
+        if (!isset($_SESSION['slideIndex'])) {
+            $_SESSION['slideIndex'] = 1;
+        }
+
+        // Get the current slide index, default to session value if not set in the URL
+        if (isset($_GET['slide'])) {
+            $_SESSION['slideIndex'] = (int)$_GET['slide'];
+        }
+
+        // Handle next and previous logic
+        if (isset($_GET['action'])) {
+            if ($_GET['action'] === 'next') {
+                $_SESSION['slideIndex'] = ($_SESSION['slideIndex'] % $NRIMAGES) + 1; // Go to next slide, loop back to 1
+            } elseif ($_GET['action'] === 'prev') {
+                $_SESSION['slideIndex'] = ($_SESSION['slideIndex'] - 2 + $NRIMAGES) % $NRIMAGES + 1; // Go to previous slide, loop back to last
+            }
+        }
+
+        // Current slide index
+        $slideIndex = $_SESSION['slideIndex'];
+        ?>
 </head>
 
 <body>
