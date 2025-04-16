@@ -20,12 +20,15 @@
     }
     $nrUsers = count($usernames);
     echo "Number of users: " . $nrUsers . "<br>";
+    echo "<br>";
+
     for($i = 0; $i < $nrUsers; $i++){
         echo "<div class=\"users\">";
         echo $usernames[$i] . "<br>";
         echo $emails[$i] . "<br>";
         echo $passwords[$i] . "<br>";
         echo "</div>";
+        echo "<br>";
     }
     fclose($file);
 ?>
